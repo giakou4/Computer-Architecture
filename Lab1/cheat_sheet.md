@@ -43,7 +43,7 @@
 
 #### cpu models
 
-* ./build/ARM/gem5.opt configs/example/se.py --cpu=MinorCPU --caches tests/testprogs/hello/bin/arm/linux/hello 
+* ./build/ARM/gem5.opt configs/example/se.py --cpu-type=MinorCPU --caches -c tests/testprogs/hello/bin/arm/linux/hello
 
 
 
