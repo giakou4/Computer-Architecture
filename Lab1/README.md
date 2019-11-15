@@ -58,13 +58,13 @@ The BaseSimpleCPU can not be run on its own. You must use one of the classes tha
 
 ###### Run with Minor CPU model:
 ```
-./build/ARM/gem5.opt configs/example/se.py --cpu-type=MinorCPU --caches -c myprog_arm
+./build/ARM/gem5.opt -d results_minor_cpu configs/example/se.py --cpu-type=MinorCPU --caches -c myprog_arm
 ```
  According to _results_minor_cpu_, the programm myprog.c (after cross-compiled to myprog_arm) run for 0.000096 seconds at 1GHz clock which is 95628000 ticks.
  
  ###### Run with Timing Simple CPU model
  ```
-./build/ARM/gem5.opt configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c myprog_arm
+./build/ARM/gem5.opt -d results_timing_simples_cpu configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c myprog_arm
 ```
   According to _results_timing_simple_cpu_, the programm myprog.c (after cross-compiled to myprog_arm) run for 0.000180 seconds at 1GHz clock which is 179649000 ticks.
 
