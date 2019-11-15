@@ -1,9 +1,9 @@
-# Nikolaos Giakoumoglou
+## Nikolaos Giakoumoglou
 
-####AEM 9043
+#### AEM 9043
 
-# Computer-Architecture
+## Computer-Architecture
 
-####Electrical and Computer Engineering Course
-7th semester
+#### Electrical and Computer Engineering Course
+#### 7th semester
 
