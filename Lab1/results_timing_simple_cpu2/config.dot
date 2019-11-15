@@ -116,7 +116,7 @@ fontsize=14;
 label="clk_domain \n: SrcClockDomain";
 shape=Mrecord;
 style="rounded, filled";
-tooltip="clock&#61;1000&#10;\domain_id&#61;-1&#10;\eventq_index&#61;0&#10;\init_perf_level&#61;0&#10;\voltage_domain&#61;system.voltage_domain";
+tooltip="clock&#61;500&#10;\domain_id&#61;-1&#10;\eventq_index&#61;0&#10;\init_perf_level&#61;0&#10;\voltage_domain&#61;system.voltage_domain";
 }
 
 subgraph cluster_system_cpu_voltage_domain {

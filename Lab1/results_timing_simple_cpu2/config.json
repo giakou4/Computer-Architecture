@@ -117,7 +117,7 @@
         "clk_domain": {
             "name": "clk_domain", 
             "clock": [
-                1000
+                500
             ], 
             "init_perf_level": 0, 
             "voltage_domain": "system.voltage_domain", 
