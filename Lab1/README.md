@@ -74,5 +74,16 @@ The BaseSimpleCPU can not be run on its own. You must use one of the classes tha
 
 #### 3c. Some more changes
 
+###### Run with Minor CPU model , CPU clock: 2000000000000, Memory Type: DDR3 2133MHz 8x8
+```
+./build/ARM/gem5.opt -d results_minor_cpu2 configs/example/se.py --cpu-type=MinorCPU --cpu-clock=2000000000000 --mem-type=DDR3_2133_8x8 --caches -c myprog_arm
+```
+According to _results_minor_cpu2_, the programm myprog.c run for 0.000026 seconds at 2GHz
+
+###### Run with Timing Simple CPU model , CPU clock: 2000000000000, Memory Type: DDR3 2133MHz 8x8
+```
+./build/ARM/gem5.opt -d results_timing_simple_cpu2 configs/example/se.py --cpu-type=TimingSimpleCPU --cpu-clock=2000000000000 --mem-type=DDR3_2133_8x8 --caches -c myprog_arm
+```
+
 
 
