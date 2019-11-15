@@ -52,17 +52,19 @@ The BaseSimpleCPU can not be run on its own. You must use one of the classes tha
 
  The TimingSimpleCPU is the version of SimpleCPU that uses timing memory accesses . It stalls on cache accesses and waits for the memory system to respond prior to proceeding. Like the AtomicSimpleCPU, the TimingSimpleCPU is also derived from BaseSimpleCPU, and implements the same set of functions. It defines the port that is used to hook up to memory, and connects the CPU to the cache. It also defines the necessary functions for handling the response from memory to the accesses sent out.
 
- [click for source](http://gem5.org/SimpleCPU#BaseSimpleCPU)
-
-
+ Source: [gem5.org](http://gem5.org/SimpleCPU#BaseSimpleCPU)
 
 #### 3a. Run my C programm with different cpu models
 
-
+###### Run with Minor CPU model:
+ According to _results_minor_cpu_, the programm myprog.c (after cross-compiled to myprog_arm) run for 0.000096 seconds at 1GHz clock which is 95628000 ticks.
+ 
+ ###### Run with Timing Simple CPU model
+  According to _results_timing_simple_cpu_, the programm myprog.c (after cross-compiled to myprog_arm) run for 0.000180 seconds at 1GHz clock which is 179649000 ticks.
 
 #### 3b. Observe similarities and differencies in [3a]
-
-
+ We observe difference is the time: Minor CPU model run 1.875 times faster than the Timing Simple CPU model.
+ This could be expected because the Timing Simple CPU model stalls on cache accesses and wait for the memory system to respond and as a result it would take more time to read from memory.
 
 #### 3c. Some more changes
 
