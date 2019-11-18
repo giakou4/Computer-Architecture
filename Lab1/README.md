@@ -55,6 +55,7 @@ The BaseSimpleCPU can not be run on its own. You must use one of the classes tha
  Source: [gem5.org](http://gem5.org/SimpleCPU#BaseSimpleCPU)
 
 #### 3a. Run my C programm with different cpu models
+myprog.c
 
 ###### Run with Minor CPU model:
 ```
