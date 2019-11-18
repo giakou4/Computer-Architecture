@@ -70,8 +70,8 @@ myprog.c
   According to _results_timing_simple_cpu_, the programm myprog.c (after cross-compiled to myprog_arm) run for 0.000180 seconds at 1GHz clock which is 179649000 ticks.
 
 #### 3b. Observe similarities and differencies in [3a]
- We observe difference in the time of execution: Minor CPU model run 1.875 times faster than the Timing Simple CPU model.
- This could be expected because the Timing Simple CPU model stalls on cache accesses and wait for the memory system to respond and as a result it would take more time to read from memory.
+ We observe difference in the time of execution: Minor CPU model runs 1.875 times faster than the Timing Simple CPU model.
+ This could be expected because the Timing Simple CPU model stalls on cache accesses and waits for the memory system to respond and as a result it would take more time to read from memory.
 
 #### 3c. Some more changes
 
