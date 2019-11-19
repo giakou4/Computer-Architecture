@@ -29,7 +29,7 @@
 >parameters are declared in _starter_se.py_
 >exit status on _hello_result_
 
-* ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py
+* ./build/ARM/gem5.opt -d RESULTS configs/example/arm/starter_se.py
   --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
 
 #### cross compilers
@@ -43,7 +43,7 @@
 
 #### cpu models
 
-* ./build/ARM/gem5.opt configs/example/se.py --cpu-type=MinorCPU --caches -c tests/testprogs/hello/bin/arm/linux/hello
+* ./build/ARM/gem5.opt -d RESULTS configs/example/se.py --cpu-type=MinorCPU --caches -c tests/testprogs/hello/bin/arm/linux/hello
 
 
 
