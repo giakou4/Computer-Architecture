@@ -117,7 +117,7 @@
         "clk_domain": {
             "name": "clk_domain", 
             "clock": [
-                500
+                1000
             ], 
             "init_perf_level": 0, 
             "voltage_domain": "system.voltage_domain", 
@@ -163,7 +163,7 @@
         "cpu_clk_domain": {
             "name": "cpu_clk_domain", 
             "clock": [
-                500
+                2000
             ], 
             "init_perf_level": 0, 
             "voltage_domain": "system.cpu_voltage_domain", 
@@ -1197,7 +1197,7 @@
                         "pid": 100, 
                         "kvmInSE": false, 
                         "cxx_class": "Process", 
-                        "executable": "myprog_arm", 
+                        "executable": "myprog_arm2", 
                         "drivers": [], 
                         "system": "system", 
                         "gid": 100, 
@@ -1214,7 +1214,7 @@
                         "path": "system.cpu.workload", 
                         "name": "workload", 
                         "cmd": [
-                            "myprog_arm"
+                            "myprog_arm2"
                         ], 
                         "errout": "cerr", 
                         "useArchPT": false, 

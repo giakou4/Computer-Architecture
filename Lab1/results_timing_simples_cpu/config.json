@@ -62,7 +62,7 @@
                 "app_path": "/proc", 
                 "name": "redirect_paths0", 
                 "host_paths": [
-                    "results_timing_simple_cpu2/fs/proc"
+                    "results_timing_simples_cpu/fs/proc"
                 ], 
                 "eventq_index": 0, 
                 "cxx_class": "RedirectPath", 
@@ -73,7 +73,7 @@
                 "app_path": "/sys", 
                 "name": "redirect_paths1", 
                 "host_paths": [
-                    "results_timing_simple_cpu2/fs/sys"
+                    "results_timing_simples_cpu/fs/sys"
                 ], 
                 "eventq_index": 0, 
                 "cxx_class": "RedirectPath", 
@@ -84,7 +84,7 @@
                 "app_path": "/tmp", 
                 "name": "redirect_paths2", 
                 "host_paths": [
-                    "results_timing_simple_cpu2/fs/tmp"
+                    "results_timing_simples_cpu/fs/tmp"
                 ], 
                 "eventq_index": 0, 
                 "cxx_class": "RedirectPath", 
@@ -163,7 +163,7 @@
         "cpu_clk_domain": {
             "name": "cpu_clk_domain", 
             "clock": [
-                2000
+                500
             ], 
             "init_perf_level": 0, 
             "voltage_domain": "system.cpu_voltage_domain", 
@@ -632,17 +632,17 @@
                 "static_backend_latency": 10000, 
                 "IDD62": 0.0, 
                 "tCCD_L": 0, 
-                "IDD2P1": 0.043000000000000003, 
+                "IDD2P1": 0.032, 
                 "IDD2P0": 0.0, 
                 "IDD4W2": 0.0, 
                 "tCS": 2500, 
                 "power_model": [], 
                 "qos_priority_escalation": false, 
-                "tCL": 13090, 
-                "tCK": 938, 
-                "tBURST": 3752, 
+                "tCL": 13750, 
+                "tCK": 1250, 
+                "tBURST": 5000, 
                 "IDD3P0": 0.0, 
-                "IDD3P1": 0.044, 
+                "IDD3P1": 0.038, 
                 "name": "mem_ctrls", 
                 "device_size": 536870912, 
                 "tREFI": 7800000, 
@@ -661,8 +661,8 @@
                     "is_source": "False", 
                     "role": "GEM5 RESPONDER"
                 }, 
-                "IDD4R": 0.191, 
-                "IDD4W": 0.157, 
+                "IDD4R": 0.157, 
+                "IDD4W": 0.125, 
                 "tWR": 15000, 
                 "banks_per_rank": 8, 
                 "p_state_clk_gate_max": 1000000000000, 
@@ -688,7 +688,7 @@
                 "p_state_clk_gate_min": 1000, 
                 "ranks_per_channel": 2, 
                 "qos_q_policy": "fifo", 
-                "tRAS": 33000, 
+                "tRAS": 35000, 
                 "static_frontend_latency": 10000, 
                 "devices_per_rank": 8, 
                 "range": "0:536870911", 
@@ -701,7 +701,7 @@
                 "qos_syncro_scheduler": false, 
                 "path": "system.mem_ctrls", 
                 "bank_groups_per_rank": 0, 
-                "IDD2N": 0.037, 
+                "IDD2N": 0.032, 
                 "qos_turnaround_policy": null, 
                 "in_addr_map": true, 
                 "tRTW": 2500, 
@@ -716,22 +716,22 @@
                 "conf_table_reported": true, 
                 "tXS": 270000, 
                 "tXP": 6000, 
-                "IDD3N": 0.044, 
+                "IDD3N": 0.038, 
                 "tCCD_L_WR": 0, 
                 "kvm_map": true, 
-                "tXAW": 25000, 
+                "tXAW": 30000, 
                 "IDD3P12": 0.0, 
                 "IDD3N2": 0.0, 
                 "device_bus_width": 8, 
                 "cxx_class": "DRAMCtrl", 
                 "null": false, 
                 "tRRD_L": 0, 
-                "tRRD": 5000, 
+                "tRRD": 6000, 
                 "clk_domain": "system.clk_domain", 
                 "IDD6": 0.02, 
-                "IDD5": 0.25, 
-                "tRCD": 13090, 
-                "IDD0": 0.07, 
+                "IDD5": 0.23500000000000001, 
+                "tRCD": 13750, 
+                "IDD0": 0.055, 
                 "min_writes_per_switch": 16, 
                 "IDD02": 0.0, 
                 "page_policy": "open_adaptive", 
@@ -739,7 +739,7 @@
                 "IDD4R2": 0.0, 
                 "tXSDLL": 0, 
                 "p_state_clk_gate_bins": 20, 
-                "tRP": 13090
+                "tRP": 13750
             }
         ], 
         "exit_on_work_items": false, 
