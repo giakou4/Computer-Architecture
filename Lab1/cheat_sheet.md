@@ -27,7 +27,7 @@
 
 >run pre-complied program _hello_ 
 >parameters are declared in _starter_se.py_
->exit status on _hello_result_
+>exit status on _RESULTS_
 
 * ./build/ARM/gem5.opt -d RESULTS configs/example/arm/starter_se.py
   --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
@@ -41,9 +41,9 @@
 
 * arm-linux-gnueabihf-gcc --static myprog.c -o myprog_arm
 
-#### cpu models
+#### cpu models & cpu clock to 1GHz
 
-* ./build/ARM/gem5.opt -d RESULTS configs/example/se.py --cpu-type=MinorCPU --caches -c tests/testprogs/hello/bin/arm/linux/hello
+* ./build/ARM/gem5.opt -d RESULTS configs/example/se.py --cpu-type=MinorCPU --cpu-clock=1000000000 --caches -c tests/testprogs/hello/bin/arm/linux/hello
 
 
 
