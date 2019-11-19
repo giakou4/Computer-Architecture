@@ -25,8 +25,8 @@
 
 * ./build/ARM/gem5.opt configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
 
->run pre-complied program _hello_ 
->parameters are declared in _starter_se.py_
+>run pre-complied program _hello_,
+>parameters are declared in _starter_se.py_,
 >exit status on _RESULTS_
 
 * ./build/ARM/gem5.opt -d RESULTS configs/example/arm/starter_se.py
