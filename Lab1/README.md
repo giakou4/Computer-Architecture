@@ -79,13 +79,13 @@ myprog.c
 ```
 ./build/ARM/gem5.opt -d results_minor_cpu2 configs/example/se.py --cpu-type=MinorCPU --cpu-clock=500000000 --mem-type=DDR3_2133_8x8 --caches -c myprog_arm2
 ```
-[Note that we also manually change the clock to 2GHz from the ./my_gem5/configs/common/Options.py line 85]
-According to _results_minor_cpu2_, the programm myprog.c run for 0.000669  seconds. The clock is "slower" so the execution time took longer.
+>Note that we also manually change the clock to 2GHz from the ./my_gem5/configs/common/Options.py line 85
+According to _results_minor_cpu2_, the programm myprog2.c run for 0.000669  seconds. The clock is "slower" so the execution time took longer.
 
 ###### Run with Timing Simple CPU model , CPU clock: 2GHz, Memory Type: DDR3 2133MHz 8x8
 ```
 ./build/ARM/gem5.opt -d results_timing_simple_cpu2 configs/example/se.py --cpu-type=TimingSimpleCPU --cpu-clock=500000000 --mem-type=DDR3_2133_8x8 --caches -c myprog_arm2
 ```
-According to _results_minor_cpu2_, the programm myprog.c run for 1.75 seconds.
+According to _results_minor_cpu2_, the programm myprog2.c run for 1.75 seconds.
 
 
