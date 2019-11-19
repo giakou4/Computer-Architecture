@@ -79,7 +79,7 @@ myprog.c
 ```
 ./build/ARM/gem5.opt -d results_minor_cpu2 configs/example/se.py --cpu-type=MinorCPU --cpu-clock=500000000 --mem-type=DDR3_2133_8x8 --caches -c myprog_arm2
 ```
->Note that we also manually change the clock to 2GHz from the ./my_gem5/configs/common/Options.py line 85
+>Note that we also manually change the clock to 500MHz from the ./my_gem5/configs/common/Options.py line 85
 
 According to _results_minor_cpu2_, the programm myprog2.c run for 0.000669  seconds. The clock is "slower" so the execution time took longer.
 
