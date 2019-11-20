@@ -396,7 +396,7 @@
                         "maxStackSize": 67108864, 
                         "ppid": 0, 
                         "type": "Process", 
-                        "cwd": "/home/giakou/my_gem5", 
+                        "cwd": "/data/student/gem5", 
                         "pgid": 100, 
                         "simpoint": 0, 
                         "euid": 100, 
