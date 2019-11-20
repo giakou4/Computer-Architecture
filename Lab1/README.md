@@ -61,16 +61,16 @@ myprog.c
 ```
 ./build/ARM/gem5.opt -d results_minor_cpu configs/example/se.py --cpu-type=MinorCPU --caches -c myprog_arm2
 ```
- According to _results_minor_cpu_, the programm myprog2.c (after cross-compiled to myprog_arm2) run for  0.000213 seconds at 1GHz clock.
+ According to _results_minor_cpu_, the programm myprog2.c (after cross-compiled to myprog_arm2) run for  0.000206 seconds at 1GHz clock.
  
  ###### Run with Timing Simple CPU model
  ```
 ./build/ARM/gem5.opt -d results_timing_simples_cpu configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c myprog_arm2
 ```
-  According to _results_timing_simple_cpu_, the programm myprog2.c (after cross-compiled to myprog_arm2) run for  0.000501 seconds at 1GHz clock.
+  According to _results_timing_simple_cpu_, the programm myprog2.c (after cross-compiled to myprog_arm2) run for  0.000532 seconds at 1GHz clock.
 
 #### 3b. Observe similarities and differencies in [3a]
- We observe difference in the time of execution: Minor CPU model runs 2.35211268 times faster than the Timing Simple CPU model.
+ We observe difference in the time of execution: Minor CPU model runs 2.58252427 times faster than the Timing Simple CPU model.
  This could be expected because the Timing Simple CPU model stalls on cache accesses and waits for the memory system to respond and as a result it would take more time to read from memory. My program has 1 loop to write to an array of 10000 slots and a second loop to add 5 to each value of the array(many memory acceses).
  
 #### 3c. Some more changes
@@ -81,12 +81,12 @@ myprog.c
 ```
 >Note that we also manually change the clock to 500MHz from the ./my_gem5/configs/common/Options.py line 85
 
-According to _results_minor_cpu2_, the programm myprog2.c run for 0.000669  seconds. The clock is "slower" so the execution time took longer.
+According to _results_minor_cpu2_, the programm myprog2.c run for 0.000648  seconds. The clock is "slower" so the execution time took longer, despite the fact that the DRAM had a "faster" clock.
 
 ###### Run with Timing Simple CPU model , CPU clock: 2GHz, Memory Type: DDR3 2133MHz 8x8
 ```
 ./build/ARM/gem5.opt -d results_timing_simple_cpu2 configs/example/se.py --cpu-type=TimingSimpleCPU --cpu-clock=500000000 --mem-type=DDR3_2133_8x8 --caches -c myprog_arm2
 ```
-According to _results_minor_cpu2_, the programm myprog2.c run for 1.75 seconds.
+According to _results_minor_cpu2_, the programm myprog2.c run for 0.001975 seconds. The clock is "slower" so the execution time took longer, despite the fact that the DRAM had a "faster" clock.
 
 
