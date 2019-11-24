@@ -89,6 +89,23 @@ We also observe that having 2 times better clock, doesnt make the benchmarks run
 
 Improve CPI 
 
+#### specbzip benchmark
+
+Best CPI was achived for:
+```
+./build/ARM/gem5.opt -d spec_results/specbzip9 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=128kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=16 --l2_assoc=8 --cacheline_size=256 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+```
+Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. We tried different associativities for l1 data cache as follownging:
+l1d_assoc = 4 ---> CPI = 1.56
+l1d_assoc = 8 ---> CPI = 1.55
+l1d_assoc = 16 ---> CPI = 1.54
+l1d_assoc = 32 ---> CPI = 1.55
+As a result l1d_assoc = 16 gave the best result.
+By increasing cache line to 256 we got slightly better CPI.
+Then we tried different l2 cache size. The highest possible (4MB) gave better results(1.54371) with l2 associativity equals to 8. Different associativity gave slightly higher CPI
+
+#### speccmf benchmark
+
 ### [2.1]
 
 ### [2.2]
