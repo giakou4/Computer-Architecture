@@ -43,8 +43,8 @@ from _config.ini_ we can find the requested parameters:
 
 ##### [1.2] Results
 
-| Benchmarks	| system.cpu.cpi |	sim_seconds | dcache-missrate	| icache-missrate	| l2-missrate
-| ----------- | -------------- | ------------ | --------------- | ----------------| ---------- | 
+| Benchmarks	| system.cpu.cpi |	sim_seconds | dcache-miss-rate	| icache-miss-rate	| l2-miss-rate |
+| ----------- | -------------- | ------------ | ----------------- | ------------------| ------------ | 
 | specbzip	| 1.683172	| 0.084159	| 0.014840	| 0.000074	| 0.281708 | 
 | spechmmer	| 1.187362	| 0.059368	| 0.001645	| 0.000205	| 0.082246 | 
 | speclibm	| 3.493611	| 0.174681	| 0.060971	| 0.000099	| 0.999927 | 
