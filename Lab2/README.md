@@ -85,7 +85,11 @@ Results are presented in _spec_results2_/_Results2.txt
 | specmcf		| 1.109538	| 0.055477	| 0.002051	| 0.000037	| 0.724040 | 
 | specsjeng	| 10.270810	| 0.513541	| 0.121829	| 0.000020	| 0.999979 | 
 
-We observe that in both executions, system.clk_domain = 1000 (line 289) but system.cpu_clk_domain.clock = 1000 (line 758) for 1GHz and 500 for 2GHz
+We observe that in both executions, system.clk_domain = 1000 (line 289) but system.cpu_clk_domain.clock = 1000 (line 758) for 1GHz and 500 for 2GHz.
+For 1 GHz,  system.cpu_clk_domain.clock = 500 means 500 ticks / cpu cycle = 1 GHz
+For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GHz
+
+We also observe that having 2 times better clock, doesnt make the benchmarks run twice faster, but it is very close to double it. As a result there is no perfect scaling.
 
 #### Questions Part 2
 
