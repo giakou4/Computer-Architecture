@@ -107,6 +107,20 @@ Then we tried different l2 cache size. The highest possible (4MB) gave better re
 Lastly, further increase to cache line, increases CPI.
 
 #### speccmf benchmark
+Best CPI(1.109538--->1.062561) was achieved for 
+```
+./build/ARM/gem5.opt -d spec_results/specmcf11 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=128kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=16 --l2_assoc=8 --cacheline_size=512 --cpu-clock=1GHz -c spec_cpu2006/429.mcf/src/specmcf -o "spec_cpu2006/429.mcf/data/inp.in" -I 100000000
+```
+Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. We tried different associativities for l1 data cache as following:
+* l1d_assoc = 2 ---> CPI = 1.06
+* l1d_assoc = 4 ---> CPI = 1.10
+* l1d_assoc = 8 ---> CPI = 1.10
+As a result l1d_assoc = 2 gave the best result.  
+Note we didnt change l1 instruction cache size and associativity because the misses from instruction l1 were very low.
+Increasing cache line to 512KB increased CPI aswell.
+L2 cache associativity didnt seem to affect CPI, so we kept it to 8
+Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
+
 
 ### [2.1]
 
