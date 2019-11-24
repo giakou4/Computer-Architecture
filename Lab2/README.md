@@ -32,13 +32,14 @@ Results are presented in _spec_results1_
 
 ##### [1.1] Finding some parameters
 from _config.ini_ we can find the requested parameters:
-L1 Instruction cache size: 32768 (line 813)
-L1 Instruction cache associativity: 2 (line 793)
-L1 Data cache size: 65535 (line 179)
-L1 Data cache associativity: 2 (line 159)
-L2 cache size: 2097152 (line 1018)
-L2 cache associativity: 8 (ine 998)
-cache line size: 64 (line 15)
+
+* L1 Instruction cache size: 32768 (line 813)
+* L1 Instruction cache associativity: 2 (line 793)
+* L1 Data cache size: 65535 (line 179)
+* L1 Data cache associativity: 2 (line 159)
+* L2 cache size: 2097152 (line 1018)
+* L2 cache associativity: 8 (ine 998)
+*cache line size: 64 (line 15)
 
 ##### [1.2] Results
 
