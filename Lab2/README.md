@@ -87,9 +87,9 @@ We also observe that having 2 times better clock, doesnt make the benchmarks run
 
 ## Questions Part 2
 
-Improve CPI 
+### [2.1]
 
-#### specbzip benchmark
+#### [2.1.1] Improve specbzip benchmark's CPI
 
 Best CPI(1.613367--->1.543471) was achived for:
 ```
@@ -106,7 +106,7 @@ By increasing cache line to 256 we got slightly better CPI.
 Then we tried different l2 cache size. The highest possible (4MB) gave better results(1.54371) with l2 associativity equals to 8. Different associativity gave slightly higher CPI.
 Lastly, further increase to cache line, increases CPI.
 
-#### speccmf benchmark
+#### [2.1.2] Improve speccmf benchmark's CPI
 Best CPI(1.109538--->1.062561) was achieved for 
 ```
 ./build/ARM/gem5.opt -d spec_results/specmcf11 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=128kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=16 --l2_assoc=8 --cacheline_size=512 --cpu-clock=1GHz -c spec_cpu2006/429.mcf/src/specmcf -o "spec_cpu2006/429.mcf/data/inp.in" -I 100000000
@@ -121,8 +121,11 @@ Increasing cache line to 512KB increased CPI aswell.
 L2 cache associativity didnt seem to affect CPI, so we kept it to 8
 Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
 
+#### [2.1.3] Improve spechmmer benchmark's CPI
 
-### [2.1]
+#### [2.1.4] Improve specsjeng benchmark's CPI 
+
+#### [2.1.5] Improve speclibm benchmark's CPI 
 
 ### [2.2]
 
