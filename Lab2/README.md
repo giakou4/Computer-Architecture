@@ -45,11 +45,11 @@ from _config.ini_ we can find the requested parameters:
 
 | Benchmarks	| system.cpu.cpi |	sim_seconds | dcache-miss-rate	| icache-miss-rate	| l2-miss-rate |
 | ----------- | -------------- | ------------ | ----------------- | ------------------| ------------ | 
-| specbzip	| 1.683172	| 0.084159	| 0.014840	| 0.000074	| 0.281708 | 
-| spechmmer	| 1.187362	| 0.059368	| 0.001645	| 0.000205	| 0.082246 | 
-| speclibm	| 3.493611	| 0.174681	| 0.060971	| 0.000099	| 0.999927 | 
-| specmcf		| 1.109538	| 0.055477	| 0.002051	| 0.000037	| 0.724040 | 
-| specsjeng	| 10.270810	| 0.513541	| 0.121829	| 0.000020	| 0.999979 | 
+| specbzip	| 1.613367 |	0.161337 |	0.014683	| 0.000074 |	0.281702 | 
+| spechmmer	| 1.184534 | 0.118453 |	0.001638	| 0.000205	| 0.082233 | 
+| speclibm	| 2.623555 | 0.262355 |	0.060971	| 0.000099	| 0.999927 | 
+| specmcf		| 1.091249| 0.109125 |	0.002051	| 0.000037	| 0.724040 | 
+| specsjeng	| 10.270810	| 0.513541 | 0.121829	| 0.000020	| 0.999979 | 
 
 ##### [1.3] Run benchmarks with cpu-clock=2GHz
 
@@ -74,6 +74,14 @@ from _config.ini_ we can find the requested parameters:
 ```
 
 Results are presented in _spec_results2_
+
+| Benchmarks	| system.cpu.cpi |	sim_seconds | dcache-miss-rate	| icache-miss-rate	| l2-miss-rate |
+| ----------- | -------------- | ------------ | ----------------- | ------------------| ------------ | 
+| specbzip	| 1.683172	| 0.084159	| 0.014840	| 0.000074	| 0.281708 | 
+| spechmmer	| 1.187362	| 0.059368	| 0.001645	| 0.000205	| 0.082246 | 
+| speclibm	| 3.493611	| 0.174681	| 0.060971	| 0.000099	| 0.999927 | 
+| specmcf		| 1.109538	| 0.055477	| 0.002051	| 0.000037	| 0.724040 | 
+| specsjeng	| 10.270810	| 0.513541	| 0.121829	| 0.000020	| 0.999979 | 
 
 We observe that in both executions, system.clk_domain = 1000 (line 289) but system.cpu_clk_domain.clock = 1000 (line 758) for 1GHz and 500 for 2GHz
 
