@@ -54,9 +54,9 @@ Results are presented in _spec_results1_/_Results1.txt_
 | specsjeng	| 10.270810	| 0.513541 | 0.121829	| 0.000020	| 0.999979 | 
 
 Below are the links for the relative graphs:
-* [CPI][https://github.com/giakou4/Computer-Architecture/blob/master/Lab2/spec_results1/cpi1.png]
-* [sim_seconds][https://github.com/giakou4/Computer-Architecture/blob/master/Lab2/spec_results1/sim_seconds1.png]
-* [miss-rate][https://github.com/giakou4/Computer-Architecture/blob/master/Lab2/spec_results1/miss-rate1.png]
+* [CPI](https://github.com/giakou4/Computer-Architecture/blob/master/Lab2/spec_results1/cpi1.png)
+* [sim_seconds](https://github.com/giakou4/Computer-Architecture/blob/master/Lab2/spec_results1/sim_seconds1.png)
+* [miss-rate](https://github.com/giakou4/Computer-Architecture/blob/master/Lab2/spec_results1/miss-rate1.png)
 
 ##### [1.3] Run benchmarks with cpu-clock=2GHz
 
