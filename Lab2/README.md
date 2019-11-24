@@ -75,7 +75,7 @@ from _config.ini_ we can find the requested parameters:
 
 Results are presented in _spec_results2_
 
-We observe that in both executions, system.clk_domain = 1000 (line 289) and system.cpu_clk_domain.clock = 500 (line 758)
+We observe that in both executions, system.clk_domain = 1000 (line 289) but system.cpu_clk_domain.clock = 1000 (line 758) for 1GHz and 500 for 2GHz
 
 #### Questions Part 2
 
