@@ -75,6 +75,8 @@ from _config.ini_ we can find the requested parameters:
 
 Results are presented in _spec_results2_
 
+We observe that in both executions, system.clk_domain = 1000 (line 289) and system.cpu_clk_domain.clock = 500 (line 758)
+
 #### Questions Part 2
 
 Improve CPI 
