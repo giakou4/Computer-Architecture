@@ -105,6 +105,7 @@ As a result l1d_assoc = 16 gave the best result.
 By increasing cache line to 256 we got slightly better CPI.  
 Then we tried different l2 cache size. The highest possible (4MB) gave better results(1.54371) with l2 associativity equals to 8. Different associativity gave slightly higher CPI.
 Lastly, further increase to cache line, increases CPI.
+Improvement: l2-miss-rate dropped from 28% to 16%
 
 #### [2.1.2] Improve speccmf benchmark's CPI
 Best CPI(1.109538--->1.062561) was achieved for 
@@ -117,9 +118,10 @@ Due to low l1 instruction misses, we increased the l1 data cache to 128KB which 
 * l1d_assoc = 8 ---> CPI = 1.10
 As a result l1d_assoc = 2 gave the best result.  
 Note we didnt change l1 instruction cache size and associativity because the misses from instruction l1 were very low.
-Increasing cache line to 512KB increased CPI aswell.
+Increasing cache line does not affect CPI(=ct).
 L2 cache associativity didnt seem to affect CPI, so we kept it to 8
 Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
+(We also observe with l1d_assoc = 16 and cache line=512 we achieve the same CPI, but it would be more expensive (see questions part 3))
 
 #### [2.1.3] Improve spechmmer benchmark's CPI
 
