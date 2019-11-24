@@ -57,6 +57,7 @@ Results are presented in _spec_results1_/_Results1.txt_
 ![miss-rate1](https://user-images.githubusercontent.com/57758089/69497217-289d8b80-0ee3-11ea-9c69-e76e80942de1.png)
 ![cpi1](https://user-images.githubusercontent.com/57758089/69497218-289d8b80-0ee3-11ea-941f-44a5df382299.png)
 
+We observe that the instruction cache miss-rate is near 0%,  while data miss-rate is <13%. The l2 cache miss-rate though is very high, especially for speclibm specmcf and specsjeng, despite the fact that l2 cache is 2MB 8-way assiciativity. The higher the miss-rate, the higher the CPI(many misses results more acceses to memory, more acceses to memory results more cycles to fetch data). The specsjeng has the highest data cache and l2 cache miss rate and the highest CPI.
 
 ##### [1.3] Run benchmarks with cpu-clock=2GHz
 
