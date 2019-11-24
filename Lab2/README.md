@@ -43,6 +43,8 @@ from _config.ini_ we can find the requested parameters:
 
 ##### [1.2] Results
 
+Results are presented in _spec_results1_/_Results1.txt_
+
 | Benchmarks	| system.cpu.cpi |	sim_seconds | dcache-miss-rate	| icache-miss-rate	| l2-miss-rate |
 | ----------- | -------------- | ------------ | ----------------- | ------------------| ------------ | 
 | specbzip	| 1.613367 |	0.161337 |	0.014683	| 0.000074 |	0.281702 | 
@@ -73,7 +75,7 @@ from _config.ini_ we can find the requested parameters:
 ./build/ARM/gem5.opt -d spec_results/speclibm configs/example/se.py --cpu-type=MinorCPU --cpu-clock=2GHz --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
 ```
 
-Results are presented in _spec_results2_
+Results are presented in _spec_results2_/_Results2.txt
 
 | Benchmarks	| system.cpu.cpi |	sim_seconds | dcache-miss-rate	| icache-miss-rate	| l2-miss-rate |
 | ----------- | -------------- | ------------ | ----------------- | ------------------| ------------ | 
