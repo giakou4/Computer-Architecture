@@ -17,12 +17,12 @@
 #### Runnning benchmark with more parameters for specbzip
 
 ```
- ./build/ARM/gem5.opt -d spec_results/specbzip1 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=128kB --l1i_size=64kB --l2_size=2MB --l1i_assoc=2 --l1d_assoc=2 --l2_assoc=8 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+ ./build/ARM/gem5.opt -d spec_results/specbzip5 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=192kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=4 --l2_assoc=8 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
  
-./build/ARM/gem5.opt -d spec_results/specbzip2 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=64kB --l1i_size=64kB --l2_size=2MB --l1i_assoc=2 --l1d_assoc=4 --l2_assoc=8 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+  ./build/ARM/gem5.opt -d spec_results/specbzip6 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=192kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=8 --l2_assoc=8 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+  
+   ./build/ARM/gem5.opt -d spec_results/specbzip7 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=192kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=16 --l2_assoc=8 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
 
-./build/ARM/gem5.opt -d spec_results/specbzip3 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=64kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=2 --l2_assoc=8 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/specbzip4 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=64kB --l1i_size=64kB --l2_size=2MB --l1i_assoc=2 --l1d_assoc=2 --l2_assoc=16 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+   ./build/ARM/gem5.opt -d spec_results/specbzip8 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=192kB --l1i_size=64kB --l2_size=4MB --l1i_assoc=2 --l1d_assoc=16 --l2_assoc=8 --cacheline_size=128 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
 ```
 
