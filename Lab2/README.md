@@ -31,8 +31,24 @@ Results are presented in _spec_results1_
 ```
 
 ##### [1.1] Finding some parameters
+from _config.ini_ we can find the requested parameters:
+L1 Instruction cache size: 32768 (line 813)
+L1 Instruction cache associativity: 2 (line 793)
+L1 Data cache size: 65535 (line 179)
+L1 Data cache associativity: 2 (line 159)
+L2 cache size: 2097152 (line 1018)
+L2 cache associativity: 8 (ine 998)
+cache line size: 64 (line 15)
 
 ##### [1.2] Results
+
+| Benchmarks	| system.cpu.cpi |	sim_seconds | dcache-missrate	| icache-missrate	| l2-missrate
+| ----------- | -------------- | ------------ | --------------- | ----------------| ---------- | 
+| specbzip	| 1.683172	| 0.084159	| 0.014840	| 0.000074	| 0.281708 | 
+| spechmmer	| 1.187362	| 0.059368	| 0.001645	| 0.000205	| 0.082246 | 
+| speclibm	| 3.493611	| 0.174681	| 0.060971	| 0.000099	| 0.999927 | 
+| specmcf		| 1.109538	| 0.055477	| 0.002051	| 0.000037	| 0.724040 | 
+| specsjeng	| 10.270810	| 0.513541	| 0.121829	| 0.000020	| 0.999979 | 
 
 ##### [1.3] Run benchmarks with cpu-clock=2GHz
 
