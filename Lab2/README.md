@@ -4,7 +4,7 @@
 In order to make the commads run sequentially we made a function in fish to execute the commads one after the other.
 Then we made a call to that function and waited for the commads to be executed.
 
-#### Questions Part 1
+## Questions Part 1
 
 Run benchmarks with default cpu-clock, L1 instruction cache size and associativity , L1 data cache size and associativity,
 L2 cache size and associativity and cache line
@@ -24,7 +24,7 @@ The commands:
 ./build/ARM/gem5.opt -d spec_results/speclibm configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
 ```
 
-##### [1.1] Finding some parameters
+### [1.1] Finding some parameters
 from _config.ini_ we can find the requested parameters:
 
 * L1 Instruction cache size: 32768 (line 813)
@@ -35,7 +35,7 @@ from _config.ini_ we can find the requested parameters:
 * L2 cache associativity: 8 (ine 998)
 *cache line size: 64 (line 15)
 
-##### [1.2] Results
+### [1.2] Results
 
 Results are presented in _spec_results1_/_Results1.txt_
 
@@ -53,7 +53,7 @@ Results are presented in _spec_results1_/_Results1.txt_
 
 We observe that the instruction cache miss-rate is near 0%,  while data miss-rate is <13%. The l2 cache miss-rate though is very high, especially for speclibm specmcf and specsjeng, despite the fact that l2 cache is 2MB 8-way assiciativity. The higher the miss-rate, the higher the CPI(many misses results more acceses to memory, more acceses to memory results more cycles to fetch data). The specsjeng has the highest data cache and l2 cache miss rate and the highest CPI.
 
-##### [1.3] Run benchmarks with cpu-clock=2GHz
+### [1.3] Run benchmarks with cpu-clock=2GHz
 
 The commands:
 
@@ -85,15 +85,15 @@ For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GH
 
 We also observe that having 2 times better clock, doesnt make the benchmarks run twice faster, but it is very close to double it. As a result there is no perfect scaling.
 
-#### Questions Part 2
+## Questions Part 2
 
 Improve CPI 
 
-##### [2.1]
+### [2.1]
 
-##### [2.2]
+### [2.2]
 
-#### Questions Part 3
+## Questions Part 3
 
 Cost function
 
