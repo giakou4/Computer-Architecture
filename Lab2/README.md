@@ -128,7 +128,7 @@ where
 > D is the cost of the wire for the cache line  
 
 Transistors' cost has changed over the years.
-In 1968 the average cost was 1, in 2002, the average cost was 0.00000026 source:[singularity.com](singularity.com)
+In 1968 the average cost was 1, in 2002, the average cost was 0.00000026 source: [singularity.com](singularity.com)
 
 Based on this function, the associativity does not affect the circuit complexity, due to the fact that the MUXs' number of transistors does not increase much. But, the higher the bits of cache, the more complex the circuit. Note that in cache we use from many KB to some MB.
 
@@ -144,7 +144,7 @@ Based on the cost of the circuit, in order to achieve the best CPI with the lowe
 | specmcf     | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
 | spechmmer  	| 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
 | specsjeng   | 128KB  	 | 	 2        | 128      	| 4        	| 1MB     | 16       |     256     |  77% --->63% |
-| specslibm	  | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
+| specslibm	  | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 0% --->0%   |
 
 We do not present any calculations for the choices because the initial size of L2 was 2MB and the best was 4MB. The cost is already very high so we prefer the default. Despite that, the improvement for the first 3 is very low, so we had better do nothing.
 For the 4th benchmark specsjeng, by decreasing the L2 cache size to 1MB we benefit a lot regarding the cost. We choose this option with no calculations too.
