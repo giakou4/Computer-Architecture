@@ -57,7 +57,7 @@ We also observe that having 2 times better clock, does not make the benchmarks r
 
 ## Questions Part 2
 
-### [2.1]
+### [2.1] Improve benchmark's CPI
 
 #### [2.1.1] Improve specbzip benchmark's CPI
 
