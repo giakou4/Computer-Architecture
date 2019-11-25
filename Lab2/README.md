@@ -110,16 +110,16 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.0053844 or 0.5%
 
 Simulations are presented in _speccjengp_better_CPI_
 
-Best CPI(--->) was achieved for:
-* l1d_size = 
-* l1i_size = 
-* l2_ size = 
-* l1i_assoc = 
-* l1d_assoc = 
-* l2_assoc = 
-* cache_line = 
+Best CPI(10.270810--->2.636428) was achieved for:
+* l1d_size = 128KB
+* l1i_size = 128KB
+* l2_ size = 4MB
+* l1i_assoc = 2
+* l1d_assoc = 4 
+* l2_assoc = 16
+* cache_line = 2048
 
-Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] =
+Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.773308 or 77%
 
 #### [2.1.5] IMPROVE _speclibm_ BENCHMARK'S CPI 
 
@@ -140,21 +140,11 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] =
 
 #### [2.2.1] _specbzip_ BENCHMARK'S CPI
 
-Due to low l1 instruction misses, we increased the L1 data cache to 128KB which was the maximus possible. We tried different associativities for L1 data cache as following:  
-* l1d_assoc = 4 ---> CPI = 1.56
-* l1d_assoc = 8 ---> CPI = 1.55
-* l1d_assoc = 16 ---> CPI = 1.54
-* l1d_assoc = 32 ---> CPI = 1.55
-
-l1d_assoc = 16 gave the best result.  
+Due to low l1 instruction misses, we increased the L1 data cache to 128KB which was the maximus possible. We tried different associativities for L1 data cache (4,8,16,32) with l1d_assoc = 16 giving the best CPI.  
 By increasing cache line to 256 we got slightly better CPI.  
 Then we tried different L2 cache size. The highest possible (4MB) gave better results(1.54371) with L2 associativity equals to 8. Different associativity gave slightly higher CPI.
 Lastly, further increase to cache line, increases CPI.
-Improvement: l2-miss-rate dropped from 28% to 16%
-
-l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate. We also increased l1i_size due to availiable space.  
-l1i_assoc was not changed due to low L1 instruction miss-rate.  
-l2_size was increased from the beginning to 4MB due high L2 miss-rate.  
+Noticeable improvement: l2-miss-rate dropped from 28% to 16%
 
 Bigger cache line(bigger block size transfered to memory) resulted a better CPI. That could be a consequence of the benchmark's data locality.
 Higher l1d_assoc(and l2_assoc) means that the data conflict quite frequent and with l1d_assoc=16(l2_assoc=8) we reduce the number of conflicts.
@@ -162,40 +152,30 @@ Higher l1d_assoc(and l2_assoc) means that the data conflict quite frequent and w
 
 #### [2.2.2] _speccmf_ BENCHMARK'S CPI
 
-Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. We tried different associativities for l1 data cache as following:
-* l1d_assoc = 2 ---> CPI = 1.06
-* l1d_assoc = 4 ---> CPI = 1.10
-* l1d_assoc = 8 ---> CPI = 1.10
-
-As a result l1d_assoc = 2 gave the best result.  
-Note we didnt change L1 instruction cache size and associativity because the misses from instruction L1 were very low.
-Increasing cache line does not affect CPI(=ct).
-L2 cache associativity didnt seem to affect CPI, so we kept it to 8
+Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. l1i_assoc was kept default aswell
+We tried different associativities for l1 data cache (2,4,8), with the best CPI at l1d_size = 2
+Increasing cache line did not affect CPI(=ct).
+L2 cache associativity also did not seem to affect CPI, so we kept it to 8
 Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
-(We also observe with l1d_assoc = 16 and cache line=512 we achieve the same CPI, but it would be more expensive (see questions part 3))
-
-l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate.  
-l1i_assoc and l1i_size was not changed due to low L1 instruction miss-rate.  
-l2_size was increased from the beginning to 4MB due high L2 miss-rate.  
+(We also observe with l1d_assoc = 16 and cache line=512 we achieve the same CPI, but it would be more expensive (see QUESTIONS PART 3)) 
 
 Increasing l1d_assoc and cache-line, increased the CPI because the L2 miss-rate was increased due to the fact that we did not exploit locality with the correct way(we did not need so many words from L2 cache).
 
 #### [2.2.3] _spechmmer_ BENCHMARK'S CPI
 
-Increasing l2 size, CPI was decreasing, with a better result at 1MB.  
-L1 instruction cache size and associativity were fixed due to low instruction misses.  
-L1 data cache size was the maximux possible, with the associativity equal to 8(slightly different from 4,16).  
-L2 associativity did not seem to affect CPI.  
-Cache line 256 gave lower CPI.
+At first, L1 instruction misses were very low so we kept l1_assoc at 2 but we increased the l1i_size to maximum possible (128KB) for slightly beter results.
+We also increased l1d_size to maximum possible (128KB) for better results. The l1d-miss-rate was high so we would benefit from that choice. Regarding l1d_assoc, we had similar results for 4,8,16, but 8 were slightly better. Locality does not get harm for associativity.
+By increasing l2 size, CPI was decreasing, with a better result at 1MB. The same CPI was achieved for 4MB too, but lower size is prefered due to lower cost and complexity(see QUESTIONS PART 3).
+Lastly, cache line 256 gave quite lower CPI.  
 In general, the improvement to the CPI was 1 in every 100 cycles
 
-l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate.  
-l1i_assoc and l1i_size was not changed due to low L1 instruction miss-rate.  
-
-cache-line and l2_assoc did not affect the CPI at all. CPI is balanced with the combinations. L1d_assoc>2 gave better results. There were probably some conficts which can be solved with higher associativity.  
-l2_size was ideal for 1MB. 2MB had a worse behaviour but 4MB had the same behaviour. We prefered the lower size due to lower cost and complexity(see questions part 3).
-
 #### [2.2.4] _specsjeng_ BENCHMARK'S CPI 
+
+At first, L1 instruction misses were very low so we kept l1_assoc at 2 but we increased the l1i_size to maximum possible (128KB) for slightly beter results. 
+We also increased l1d_size to maximum possible (128KB) for better results, so we did with the l2_size = 4MB
+Then we tried different l1d_assoc (2,4,8) but the CPI remained the same. We can assume that collision do not happen often so increasing associativity does not avoid those collisions.
+Regarding l2_assoc we tried different values (2,4,8,16) but the CPI remained the same, possible for the above reason.
+Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) because by increasing the cache_line the CPI was getting lower and lower. We can assume that bringing more data in every miss we have a better CPI. But the l2 miss-rate remains the same, so we just benefit for L1 cache.
 
 #### [2.2.5] _speclibm_ BENCHMARK'S CPI 
 
