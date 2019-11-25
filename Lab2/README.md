@@ -199,7 +199,7 @@ Based on this function, the associativity does not affect the circuit complexity
 The cost from the other hand can be defined with a similar function but with higher gravity to L1 cache's cost because L1 must be faster and smaller than the L2.
 Regarding the speed, as mentioned before, L1(data and instruction) is faster than L2.
 
-Based on the cost of the circuit, in order to achieve the best CPI with the lower cost:
+Based on the cost of the circuit, in order to achieve the best CPI with the lower cost we make the following choices:
 
 
 | Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | improvement |
@@ -212,4 +212,22 @@ Based on the cost of the circuit, in order to achieve the best CPI with the lowe
 
 We do not present any calculations for the choices because the initial size of L2 was 2MB and the best was 4MB. The cost is already very high so we prefer the default. Despite that, the improvement for the first 3 is very low, so we had better do nothing.
 For the 4th benchmark specsjeng, by decreasing the L2 cache size to 1MB we benefit a lot regarding the cost. We choose this option with no calculations too.
+
+#### Important Note
+
+All simulations are held in the relative folders _<benchmarks_name>_better_CPI_.
+
+## CONCLUSION
+
+Running the benchmarks took a very long time, despite the fact that the simulated time was under 1 minute, actually around 10 seconds.
+The lab was not hard to be implemented, but the executions took much time.
+
+In order to have the best outcome, we assumed that the principle of superimposition can be applied. That means that we kept all thing to default and change l1d_size and l1d_assoc, then we changed l1i_size and l1i_assoc, then l2_size and l2_assoc and finally the cache-line (usually try 3 different values and some combinations among them). But most of the times, the L1 data and instruction size was set to maximum (128KB), l1i_assoc was not changed and only tried different l1d_assoc. Also we increased the l2_size to maximum and tried different associativities, because we can reduce conficts by increasing associativity. That means that we can balance lower L2 cache with higher associativity. Combining the results we had a very improved CPI. Changing some of the parameters furhter, resulted an even better CPI.
+
+It should be mentioned that we could try all possible combinations among those 7 parameters with a bash scirpt with 7 loops (actually its much less since most of the parameters can be set at the beginning) and choose the best CPI. All we had to do was wait for the script to be completed.
+
+We can learn how to fix the CPU's cache to imporve better in some benchmarks, depending on what we need our CPU to be for.
+
+We also observe how having the "best" possible cache, and by that we mean the maximum size, a high associativity, does not guarantee the best result.
+
 
