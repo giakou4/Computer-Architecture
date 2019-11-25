@@ -181,5 +181,32 @@ Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) 
 
 ## QUSTIONS PART 3
 
-Cost function
+We can define the circuit cost function via the number of the transistors. We know that cache consists of 6 transistors / bit. Also, for n-way associative, we need a mux with n-entries. The cost for 4-entries mux is 24 transistors source: [wikipedia.org](https://en.wikipedia.org/wiki/Transistor_count)
+
+cost_function = A1*l1i_size + A2*l1i_assoc + B1*l1d_size + B2*l1d_assoc + C1*l2_size + C2*l2_assoc + D*cache_line
+
+where
+
+A1 = B1 = C1 = 6 transistors / bit 
+A2, B2, C2 depends on the associativity(for direct mapped equals 0 , for 2,4-way equals 24, for 4+ equals no_of_muxs*24)
+D is the cost of the wire for the cache line 
+
+Transistors' cost has changed over the years.
+In 1968 the average cost was 1, in 2002, the average cost was 0.00000026 source:[singularity.com](singularity.com)
+
+Based on this function, the associativity does not affect the circuit complexity, due to the fact that the MUXs' number of transistors does not increase much. But, the higher the bits of cache, the more complex the circuit. Note that in cache we use from many KB to some MB.
+
+The cost from the other hand can be defined with a similar function but with higher gravity to L1 cache's cost because L1 must be faster and smaller than the L2.
+Regarding the speed, as mentioned before, L1(data and instruction) is faster than L2.
+
+Based on the cost of the circuit, in order to achieve the best CPI with the lower cost:
+
+
+| Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | improvement |
+| ----------- | ----- -- | ---------- | --------- | ----------| ------- | -------- | ----------  |------------ | 
+| specbzip	  | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
+| specmcf     | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
+| spechmmer  	| 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
+| specsjeng   | 128KB  	 | 	 2        | 128      	| 4        	| 1MB     | 16       |     256   |  77% --->63% |
+| specslibm	  | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
 
