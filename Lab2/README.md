@@ -4,12 +4,12 @@
 In order to make the commads run sequentially we made a function in fish to execute the commads one after the other.
 Then we made a call to that function and waited for the commads to be executed.
 
-## Questions Part 1
+## QUESTIONS PART 1
 
 Run benchmarks with default cpu-clock, L1 instruction cache size and associativity , L1 data cache size and associativity,
 L2 cache size and associativity and cache line
 
-### [1.1] Finding some parameters
+### [1.1] FINDING SOME PARAMETERS
 from _config.ini_ we can find the requested parameters:
 * L1 Instruction cache size: 32768 (line 813)
 * L1 Instruction cache associativity: 2 (line 793)
@@ -19,7 +19,7 @@ from _config.ini_ we can find the requested parameters:
 * L2 cache associativity: 8 (ine 998)
 * cache line size: 64 (line 15)
 
-### [1.2] Results
+### [1.2] RESULTS
 
 Results are presented in _spec_results1_/_Results1.txt_
 
@@ -37,7 +37,7 @@ Results are presented in _spec_results1_/_Results1.txt_
 
 We observe that the instruction cache miss-rate is near 0%,  while data miss-rate is <13%. The l2 cache miss-rate though is very high, especially for speclibm specmcf and specsjeng, despite the fact that l2 cache is 2MB 8-way assiciativity. The higher the miss-rate, the higher the CPI(many misses result more acceses to memory, more acceses to memory result more cycles to fetch data). The specsjeng has the highest data cache and l2 cache miss rate and the highest CPI.
 
-### [1.3] Run benchmarks with cpu-clock=2GHz
+### [1.3] RUN BECNCHMARKS WITH _cpu-clock=2GHz_
 
 Results are presented in _spec_results2_/_Results2.txt_
 
@@ -55,11 +55,11 @@ For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GH
 
 We also observe that having 2 times better clock, does not make the benchmarks run twice faster, but it is very close to double it. As a result we could say that there is no perfect scaling.
 
-## Questions Part 2
+## QUESTIONS PART 2
 
-### [2.1] Improve benchmark's CPI
+### [2.1] IMPROVE BENCHMARK'S CPI
 
-#### [2.1.1] Improve specbzip benchmark's CPI
+#### [2.1.1] IMPROVE _specbzip_ BENCHMARK'S CPI
 
 Simulations are presented in _specbzip_better_CPI_
 Best CPI(1.613367--->1.543471) was achived for:
@@ -83,7 +83,7 @@ Then we tried different L2 cache size. The highest possible (4MB) gave better re
 Lastly, further increase to cache line, increases CPI.
 Improvement: l2-miss-rate dropped from 28% to 16%
 
-#### [2.1.2] Improve speccmf benchmark's CPI
+#### [2.1.2] IMPROVE _speccmf_ BENCHMARK'S CPI
 
 Simulations are presented in _speccmf_better_CPI_
 Best CPI(1.109538--->1.062561) was achieved for:
@@ -107,7 +107,7 @@ L2 cache associativity didnt seem to affect CPI, so we kept it to 8
 Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
 (We also observe with l1d_assoc = 16 and cache line=512 we achieve the same CPI, but it would be more expensive (see questions part 3))
 
-#### [2.1.3] Improve spechmmer benchmark's CPI
+#### [2.1.3] IMPROVE _spechmmer_ BENCHMARK'S CPI
 
 Simulations are presented in _spechmmer_better_CPI_
 Best CPI(1.184534--->1.178156) was achieved for:
@@ -126,13 +126,13 @@ L2 associativity did not seem to affect CPI.
 Cache line 256 gave lower CPI.
 In general, the improvement to the CPI was 1 in every 100 cycles
 
-#### [2.1.4] Improve specsjeng benchmark's CPI 
+#### [2.1.4] IMPROVE _specsjeng_ BENCHMARK'S CPI 
 
-#### [2.1.5] Improve speclibm benchmark's CPI 
+#### [2.1.5] IMPROVE _speclibm_ BENCHMARK'S CPI 
 
-### [2.2] Graphs
+### [2.2] GRAPHS
 
-#### [2.2.1] Improve specbzip benchmark's CPI
+#### [2.2.1] IMPROVE _specbzip_ BENCHMARK'S CPI
 
 l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate. We also increased l1i_size due to availiable space.  
 l1i_assoc was not changed due to low L1 instruction miss-rate.  
@@ -142,7 +142,7 @@ Bigger cache line(bigger block size transfered to memory) resulted a better CPI.
 Higher l1d_assoc(and l2_assoc) means that the data conflict quite frequent and with l1d_assoc=16(l2_assoc=8) we reduce the number of conflicts.
 
 
-#### [2.2.2] Improve speccmf benchmark's CPI
+#### [2.2.2] IMPROVE _speccmf_ BENCHMARK'S CPI
 
 l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate.  
 l1i_assoc and l1i_size was not changed due to low L1 instruction miss-rate.  
@@ -150,7 +150,7 @@ l2_size was increased from the beginning to 4MB due high L2 miss-rate.
 
 Increasing l1d_assoc and cache-line, increased the CPI because the L2 miss-rate was increased due to the fact that we did not exploit locality with the correct way(we did not need so many words from L2 cache).
 
-#### [2.2.3] Improve spechmmer benchmark's CPI
+#### [2.2.3] IMPROVE _spechmmer_ BENCHMARK'S CPI
 
 l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate.  
 l1i_assoc and l1i_size was not changed due to low L1 instruction miss-rate.  
@@ -158,11 +158,11 @@ l1i_assoc and l1i_size was not changed due to low L1 instruction miss-rate.
 cache-line and l2_assoc did not affect the CPI at all. CPI is balanced with the combinations. L1d_assoc>2 gave better results. There were probably some conficts which can be solved with higher associativity.  
 l2_size was ideal for 1MB. 2MB had a worse behaviour but 4MB had the same behaviour. We prefered the lower size due to lower cost and complexity(see questions part 3).
 
-#### [2.2.4] Improve specsjeng benchmark's CPI 
+#### [2.2.4] IMPROVE _specsjeng_ BENCHMARK'S CPI 
 
-#### [2.2.5] Improve speclibm benchmark's CPI 
+#### [2.2.5] IMPROVE _speclibm_ BENCHMARK'S CPI 
 
-## Questions Part 3
+## QUSTIONS PART 3
 
 Cost function
 
