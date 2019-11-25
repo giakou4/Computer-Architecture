@@ -98,8 +98,9 @@ Best CPI(1.613367--->1.543471) was achived for:
 * l1i_assoc = 2
 * l1d_assoc = 16
 * l2_assoc = 8
-* cache_line = 256   
-Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. We tried different associativities for l1 data cache as follownging:  
+* cache_line = 256
+
+Due to low l1 instruction misses, we increased the L1 data cache to 128KB which was the maximus possible. We tried different associativities for L1 data cache as following:  
 * l1d_assoc = 4 ---> CPI = 1.56
 * l1d_assoc = 8 ---> CPI = 1.55
 * l1d_assoc = 16 ---> CPI = 1.54
@@ -120,10 +121,12 @@ Best CPI(1.109538--->1.062561) was achieved for:
 * l1d_assoc = 2
 * l2_assoc = 8
 * cache_line = 64 
+
 Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. We tried different associativities for l1 data cache as following:
 * l1d_assoc = 2 ---> CPI = 1.06
 * l1d_assoc = 4 ---> CPI = 1.10
 * l1d_assoc = 8 ---> CPI = 1.10
+
 As a result l1d_assoc = 2 gave the best result.  
 Note we didnt change L1 instruction cache size and associativity because the misses from instruction L1 were very low.
 Increasing cache line does not affect CPI(=ct).
@@ -139,7 +142,8 @@ Best CPI(1.184534--->1.178156) was achieved for:
 * l1i_assoc = 2
 * l1d_assoc = 8
 * l2_assoc = 4
-* cache_line = 256  
+* cache_line = 256
+
 Increasing l2 size, CPI was decreasing, with a better result at 1MB.  
 L1 instruction cache size and associativity were fixed due to low instruction misses.  
 L1 data cache size was the maximux possible, with the associativity equal to 8(slightly different from 4,16).  
