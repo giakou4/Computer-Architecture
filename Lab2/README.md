@@ -63,7 +63,7 @@ We also observe that having 2 times better clock, does not make the benchmarks r
 
 
 | Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | CPI    | improvement | 
-| ----------- | -------- | ---------- | --------- | ----------| ------- | -------- | ----------  |---- -- | ----------- | 
+| ----------- | -------- | ---------- | --------- | ----------| ------- | -------- | ----------  |------- | ----------- | 
 | specbzip	  | 64KB   	 | 	 2        | 128KB     | 16      	| 4MB     | 8        |     256     |  1.613367--->1.543471 |   4%  |
 | specmcf     | 64KB   	 | 	 2        | 128KB    	| 16        | 4MB     | 8        |     512     |     1.109538--->1.062561|    4% |
 | spechmmer  	| 64KB   	 | 	 2        | 128KB    	| 8        	| 1MB     | 4        |     256     | 1.184534--->1.178156  |    0.5%  |
