@@ -4,7 +4,7 @@
 In order to make the commads run sequentially we made a function in fish to execute the commads one after the other.
 Then we made a call to that function and waited for the commads to be executed.
 
-## QUESTIONS PART 1
+## PART 1
 
 Run benchmarks with default cpu-clock, L1 instruction cache size and associativity , L1 data cache size and associativity,
 L2 cache size and associativity and cache line
@@ -57,7 +57,7 @@ For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GH
 
 We also observe that having 2 times better clock, does not make the benchmarks run twice faster, but it is very close to double it. As a result we could say that there is no perfect scaling.
 
-## QUESTIONS PART 2
+## PART 2
 
 ### [2.1] IMPROVE BENCHMARKS' CPI
 
@@ -115,7 +115,7 @@ Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) 
 
 #### [2.2.5] _speclibm_ BENCHMARK'S CPI 
 
-## QUSTIONS PART 3
+## PART 3
 
 We can define the circuit cost function via the number of the transistors. We know that cache consists of 6 transistors / bit. Also, for n-way associative, we need a mux with n-entries. The cost for 4-entries mux is 24 transistors source: [wikipedia.org](https://en.wikipedia.org/wiki/Transistor_count)
 
