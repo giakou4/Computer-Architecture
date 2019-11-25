@@ -119,7 +119,7 @@ Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) 
 
 We can define the circuit cost function via the number of the transistors. We know that cache consists of 6 transistors / bit. Also, for n-way associative, we need a mux with n-entries. The cost for 4-entries mux is 24 transistors source: [wikipedia.org](https://en.wikipedia.org/wiki/Transistor_count)
 
-> cost_function = A1*l1i_size + A2*l1i_assoc + B1*l1d_size + B2*l1d_assoc + C1*l2_size + C2*l2_assoc + D*cache_line
+> cost_function = A1 * l1i_size + A2 * l1i_assoc + B1 * l1d_size + B2 * l1d_assoc + C1 * l2_size + C2 * l2_assoc + D * cache_line
 
 where
 
