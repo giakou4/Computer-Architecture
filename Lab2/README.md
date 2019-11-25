@@ -74,11 +74,6 @@ Best CPI(1.613367--->1.543471) was achived for:
 * cache_line = 256
 
 Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.04332306 or 4%
-Due to low l1 instruction misses, we increased the L1 data cache to 128KB which was the maximus possible. We tried different associativities for L1 data cache as following:  
-* l1d_assoc = 4 ---> CPI = 1.56
-* l1d_assoc = 8 ---> CPI = 1.55
-* l1d_assoc = 16 ---> CPI = 1.54
-* l1d_assoc = 32 ---> CPI = 1.55
 
 #### [2.1.2] IMPROVE _speccmf_ BENCHMARK'S CPI
 
@@ -139,6 +134,12 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] =
 ### [2.2] DESCRIPTION OF CHANGES & GRAPHS 
 
 #### [2.2.1] _specbzip_ BENCHMARK'S CPI
+
+Due to low l1 instruction misses, we increased the L1 data cache to 128KB which was the maximus possible. We tried different associativities for L1 data cache as following:  
+* l1d_assoc = 4 ---> CPI = 1.56
+* l1d_assoc = 8 ---> CPI = 1.55
+* l1d_assoc = 16 ---> CPI = 1.54
+* l1d_assoc = 32 ---> CPI = 1.55
 
 l1d_assoc = 16 gave the best result.  
 By increasing cache line to 256 we got slightly better CPI.  
