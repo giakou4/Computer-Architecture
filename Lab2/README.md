@@ -73,6 +73,7 @@ Best CPI(1.613367--->1.543471) was achived for:
 * l2_assoc = 8
 * cache_line = 256
 
+Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.04332306 or 4%
 Due to low l1 instruction misses, we increased the L1 data cache to 128KB which was the maximus possible. We tried different associativities for L1 data cache as following:  
 * l1d_assoc = 4 ---> CPI = 1.56
 * l1d_assoc = 8 ---> CPI = 1.55
@@ -96,6 +97,8 @@ Best CPI(1.109538--->1.062561) was achieved for:
 * l1d_assoc = 2
 * l2_assoc = 8
 * cache_line = 64 
+
+Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.04233924 or 4%
 
 Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. We tried different associativities for l1 data cache as following:
 * l1d_assoc = 2 ---> CPI = 1.06
@@ -121,6 +124,8 @@ Best CPI(1.184534--->1.178156) was achieved for:
 * l2_assoc = 4
 * cache_line = 256
 
+Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.0053844 or 0.5%
+
 Increasing l2 size, CPI was decreasing, with a better result at 1MB.  
 L1 instruction cache size and associativity were fixed due to low instruction misses.  
 L1 data cache size was the maximux possible, with the associativity equal to 8(slightly different from 4,16).  
@@ -130,7 +135,29 @@ In general, the improvement to the CPI was 1 in every 100 cycles
 
 #### [2.1.4] IMPROVE _specsjeng_ BENCHMARK'S CPI 
 
+Best CPI(--->) was achieved for:
+* l1d_size = 
+* l1i_size = 
+* l2_ size = 
+* l1i_assoc = 
+* l1d_assoc = 
+* l2_assoc = 
+* cache_line = 
+
+Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] =
+
 #### [2.1.5] IMPROVE _speclibm_ BENCHMARK'S CPI 
+
+Best CPI(--->) was achieved for:
+* l1d_size = 
+* l1i_size = 
+* l2_ size = 
+* l1i_assoc = 
+* l1d_assoc = 
+* l2_assoc = 
+* cache_line = 
+
+Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] =
 
 ### [2.2] GRAPHS
 
