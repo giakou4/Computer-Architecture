@@ -130,7 +130,37 @@ In general, the improvement to the CPI was 1 in every 100 cycles
 
 #### [2.1.5] Improve speclibm benchmark's CPI 
 
-### [2.2]
+### [2.2] Graphs
+
+#### [2.2.1] Improve specbzip benchmark's CPI
+
+l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate. We also increased l1i_size due to availiable space.  
+l1i_assoc was not changed due to low L1 instruction miss-rate.  
+l2_size was increased from the beginning to 4MB due high L2 miss-rate.  
+
+Bigger cache line(bigger block size transfered to memory) resulted a better CPI. That could be a consequence of the benchmark's data locality.
+Higher l1d_assoc(and l2_assoc) means that the data conflict quite frequent and with l1d_assoc=16(l2_assoc=8) we reduce the number of conflicts.
+
+
+#### [2.2.2] Improve speccmf benchmark's CPI
+
+l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate.  
+l1i_assoc and l1i_size was not changed due to low L1 instruction miss-rate.  
+l2_size was increased from the beginning to 4MB due high L2 miss-rate.  
+
+Increasing l1d_assoc and cache-line, increased the CPI because the L2 miss-rate was increased due to the fact that we did not exploit locality with the correct way(we did not need so many words from L2 cache).
+
+#### [2.2.3] Improve spechmmer benchmark's CPI
+
+l1d_size was increased from the beginning to 128KB due to high(relative high) L1 data miss-rate.  
+l1i_assoc and l1i_size was not changed due to low L1 instruction miss-rate.  
+
+cache-line and l2_assoc did not affect the CPI at all. CPI is balanced with the combinations. L1d_assoc>2 gave better results. There were probably some conficts which can be solved with higher associativity.  
+l2_size was ideal for 1MB. 2MB had a worse behaviour but 4MB had the same behaviour. We prefered the lower size due to lower cost and complexity(see questions part 3).
+
+#### [2.2.4] Improve specsjeng benchmark's CPI 
+
+#### [2.2.5] Improve speclibm benchmark's CPI 
 
 ## Questions Part 3
 
