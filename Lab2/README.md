@@ -64,6 +64,7 @@ We also observe that having 2 times better clock, does not make the benchmarks r
 #### [2.1.1] IMPROVE _specbzip_ BENCHMARK'S CPI
 
 Simulations are presented in _specbzip_better_CPI_
+
 Best CPI(1.613367--->1.543471) was achived for:
 * l1d_size = 128KB
 * l1i_size = 64KB
@@ -78,6 +79,7 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.04332306 or 4%
 #### [2.1.2] IMPROVE _speccmf_ BENCHMARK'S CPI
 
 Simulations are presented in _speccmf_better_CPI_
+
 Best CPI(1.109538--->1.062561) was achieved for:
 * l1d_size = 128KB
 * l1i_size = 32KB
@@ -92,6 +94,7 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.04233924 or 4%
 #### [2.1.3] IMPROVE _spechmmer_ BENCHMARK'S CPI
 
 Simulations are presented in _spechmmer_better_CPI_
+
 Best CPI(1.184534--->1.178156) was achieved for:
 * l1d_size = 128KB
 * l1i_size = 64KB
@@ -106,6 +109,7 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.0053844 or 0.5%
 #### [2.1.4] IMPROVE _specsjeng_ BENCHMARK'S CPI 
 
 Simulations are presented in _speccjengp_better_CPI_
+
 Best CPI(--->) was achieved for:
 * l1d_size = 
 * l1i_size = 
@@ -120,6 +124,7 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] =
 #### [2.1.5] IMPROVE _speclibm_ BENCHMARK'S CPI 
 
 Simulations are presented in _speclibm_better_CPI_
+
 Best CPI(--->) was achieved for:
 * l1d_size = 
 * l1i_size = 
