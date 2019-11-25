@@ -61,80 +61,16 @@ We also observe that having 2 times better clock, does not make the benchmarks r
 
 ### [2.1] IMPROVE BENCHMARKS' CPI
 
-#### [2.1.1] IMPROVE _specbzip_ BENCHMARK'S CPI
 
-Simulations are presented in _specbzip_better_CPI_
+| Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | CPI    | improvement | 
+| ----------- | -------- | ---------- | --------- | ----------| ------- | -------- | ----------  |---- -- | ----------- | 
+| specbzip	  | 64KB   	 | 	 2        | 128KB     | 16      	| 4MB     | 8        |     256     |  1.613367--->1.543471 |   4%  |
+| specmcf     | 64KB   	 | 	 2        | 128KB    	| 16        | 4MB     | 8        |     512     |     1.109538--->1.062561|    4% |
+| spechmmer  	| 64KB   	 | 	 2        | 128KB    	| 8        	| 1MB     | 4        |     256     | 1.184534--->1.178156  |    0.5%  |
+| specsjeng   | 128KB  	 | 	 2        | 128KB    	| 4        	| 4MB     | 16       |     2048    | 10.270810--->2.636428 |   77%  |
+| specslibm	  | 0KB   	 | 	 0        | 0KB      	| 0        	| 0MB     | 0        |     0       |    0    |  0%    |
 
-Best CPI(1.613367--->1.543471) was achived for:
-* l1d_size = 128KB
-* l1i_size = 64KB
-* l2_ size = 4MB
-* l1i_assoc = 2
-* l1d_assoc = 16
-* l2_assoc = 8
-* cache_line = 256
-
-Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.04332306 or 4%
-
-#### [2.1.2] IMPROVE _speccmf_ BENCHMARK'S CPI
-
-Simulations are presented in _speccmf_better_CPI_
-
-Best CPI(1.109538--->1.062561) was achieved for:
-* l1d_size = 128KB
-* l1i_size = 64KB
-* l2_ size = 4MB
-* l1i_assoc = 2
-* l1d_assoc = 16
-* l2_assoc = 8
-* cache_line = 512 
-
-Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.04233924 or 4%
-
-#### [2.1.3] IMPROVE _spechmmer_ BENCHMARK'S CPI
-
-Simulations are presented in _spechmmer_better_CPI_
-
-Best CPI(1.184534--->1.178156) was achieved for:
-* l1d_size = 128KB
-* l1i_size = 64KB
-* l2_ size = 1MB
-* l1i_assoc = 2
-* l1d_assoc = 8
-* l2_assoc = 4
-* cache_line = 256
-
-Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.0053844 or 0.5%
-
-#### [2.1.4] IMPROVE _specsjeng_ BENCHMARK'S CPI 
-
-Simulations are presented in _speccjengp_better_CPI_
-
-Best CPI(10.270810--->2.636428) was achieved for:
-* l1d_size = 128KB
-* l1i_size = 128KB
-* l2_ size = 4MB
-* l1i_assoc = 2
-* l1d_assoc = 4 
-* l2_assoc = 16
-* cache_line = 2048
-
-Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] = 0.773308 or 77%
-
-#### [2.1.5] IMPROVE _speclibm_ BENCHMARK'S CPI 
-
-Simulations are presented in _speclibm_better_CPI_
-
-Best CPI(--->) was achieved for:
-* l1d_size = 
-* l1i_size = 
-* l2_ size = 
-* l1i_assoc = 
-* l1d_assoc = 
-* l2_assoc = 
-* cache_line = 
-
-Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ] =
+Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ]
 
 ### [2.2] DESCRIPTION OF CHANGES & GRAPHS 
 
