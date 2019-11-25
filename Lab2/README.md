@@ -151,7 +151,7 @@ For the 4th benchmark specsjeng, by decreasing the L2 cache size to 1MB we benef
 
 #### Important Note
 
-All simulations are held in the relative folders _<benchmarks_name>_better_CPI_.
+All simulations are held in the relative folders <benchmarks_name>_better_CPI.
 
 ## CONCLUSION
 
