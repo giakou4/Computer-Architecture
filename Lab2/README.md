@@ -31,7 +31,9 @@ Results are presented in _spec_results1_/_Results1.txt_
 | specmcf		| 1.091249| 0.109125 |	0.002051	| 0.000037	| 0.724040 | 
 | specsjeng	| 10.270810	| 0.513541 | 0.121829	| 0.000020	| 0.999979 | 
 
-<img src="https://user-images.githubusercontent.com/57758089/69497216-2804f500-0ee3-11ea-87c4-16bc7aa14705.png" alt="sim_seconds" width="500" height="500"> <img src="https://user-images.githubusercontent.com/57758089/69497217-289d8b80-0ee3-11ea-9c69-e76e80942de1.png" alt="miss-rate" width="500" height="500">
+<img src="https://user-images.githubusercontent.com/57758089/69497216-2804f500-0ee3-11ea-87c4-16bc7aa14705.png" alt="sim_seconds" width="500" height="500">
+
+<img src="https://user-images.githubusercontent.com/57758089/69497217-289d8b80-0ee3-11ea-9c69-e76e80942de1.png" alt="miss-rate" width="500" height="500">
 
 <img src="https://user-images.githubusercontent.com/57758089/69497218-289d8b80-0ee3-11ea-941f-44a5df382299.png" alt="CPI" width="300" height="500">
 
