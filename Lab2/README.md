@@ -8,32 +8,16 @@ Then we made a call to that function and waited for the commads to be executed.
 
 Run benchmarks with default cpu-clock, L1 instruction cache size and associativity , L1 data cache size and associativity,
 L2 cache size and associativity and cache line
-Results are presented in _spec_results1_
-
-The commands:
-
-```
-./build/ARM/gem5.opt -d spec_results/specbzip configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/specmcf configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c spec_cpu2006/429.mcf/src/specmcf -o "spec_cpu2006/429.mcf/data/inp.in" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/spechmmer configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c spec_cpu2006/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 spec_cpu2006/456.hmmer/data/bombesin.hmm" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/specsjeng configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c  spec_cpu2006/458.sjeng/src/specsjeng -o "spec_cpu2006/458.sjeng/data/test.txt" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/speclibm configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
-```
 
 ### [1.1] Finding some parameters
 from _config.ini_ we can find the requested parameters:
-
 * L1 Instruction cache size: 32768 (line 813)
 * L1 Instruction cache associativity: 2 (line 793)
 * L1 Data cache size: 65535 (line 179)
 * L1 Data cache associativity: 2 (line 159)
 * L2 cache size: 2097152 (line 1018)
 * L2 cache associativity: 8 (ine 998)
-*cache line size: 64 (line 15)
+* cache line size: 64 (line 15)
 
 ### [1.2] Results
 
@@ -51,23 +35,9 @@ Results are presented in _spec_results1_/_Results1.txt_
 ![miss-rate1](https://user-images.githubusercontent.com/57758089/69497217-289d8b80-0ee3-11ea-9c69-e76e80942de1.png)
 ![cpi1](https://user-images.githubusercontent.com/57758089/69497218-289d8b80-0ee3-11ea-941f-44a5df382299.png)
 
-We observe that the instruction cache miss-rate is near 0%,  while data miss-rate is <13%. The l2 cache miss-rate though is very high, especially for speclibm specmcf and specsjeng, despite the fact that l2 cache is 2MB 8-way assiciativity. The higher the miss-rate, the higher the CPI(many misses results more acceses to memory, more acceses to memory results more cycles to fetch data). The specsjeng has the highest data cache and l2 cache miss rate and the highest CPI.
+We observe that the instruction cache miss-rate is near 0%,  while data miss-rate is <13%. The l2 cache miss-rate though is very high, especially for speclibm specmcf and specsjeng, despite the fact that l2 cache is 2MB 8-way assiciativity. The higher the miss-rate, the higher the CPI(many misses result more acceses to memory, more acceses to memory result more cycles to fetch data). The specsjeng has the highest data cache and l2 cache miss rate and the highest CPI.
 
 ### [1.3] Run benchmarks with cpu-clock=2GHz
-
-The commands:
-
-```
-./build/ARM/gem5.opt -d spec_results/specbzip configs/example/se.py --cpu-type=MinorCPU --cpu-clock=2GHz --caches --l2cache -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/specmcf configs/example/se.py --cpu-type=MinorCPU --cpu-clock=2GHz --caches --l2cache -c spec_cpu2006/429.mcf/src/specmcf -o "spec_cpu2006/429.mcf/data/inp.in" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/spechmmer configs/example/se.py --cpu-type=MinorCPU --cpu-clock=2GHz --caches --l2cache -c spec_cpu2006/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 spec_cpu2006/456.hmmer/data/bombesin.hmm" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/specsjeng configs/example/se.py --cpu-type=MinorCPU --cpu-clock=2GHz --caches --l2cache -c  spec_cpu2006/458.sjeng/src/specsjeng -o "spec_cpu2006/458.sjeng/data/test.txt" -I 100000000
-
-./build/ARM/gem5.opt -d spec_results/speclibm configs/example/se.py --cpu-type=MinorCPU --cpu-clock=2GHz --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
-```
 
 Results are presented in _spec_results2_/_Results2.txt_
 
@@ -83,7 +53,7 @@ We observe that in both executions, system.clk_domain = 1000 (line 289) but syst
 For 1 GHz,  system.cpu_clk_domain.clock = 500 means 500 ticks / cpu cycle = 1 GHz
 For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GHz
 
-We also observe that having 2 times better clock, doesnt make the benchmarks run twice faster, but it is very close to double it. As a result there is no perfect scaling.
+We also observe that having 2 times better clock, does not make the benchmarks run twice faster, but it is very close to double it. As a result we could say that there is no perfect scaling.
 
 ## Questions Part 2
 
@@ -91,6 +61,7 @@ We also observe that having 2 times better clock, doesnt make the benchmarks run
 
 #### [2.1.1] Improve specbzip benchmark's CPI
 
+Simulations are presented in _specbzip_better_CPI_
 Best CPI(1.613367--->1.543471) was achived for:
 * l1d_size = 128KB
 * l1i_size = 64KB
@@ -106,13 +77,15 @@ Due to low l1 instruction misses, we increased the L1 data cache to 128KB which 
 * l1d_assoc = 16 ---> CPI = 1.54
 * l1d_assoc = 32 ---> CPI = 1.55
 
-As a result l1d_assoc = 16 gave the best result.  
+l1d_assoc = 16 gave the best result.  
 By increasing cache line to 256 we got slightly better CPI.  
 Then we tried different L2 cache size. The highest possible (4MB) gave better results(1.54371) with L2 associativity equals to 8. Different associativity gave slightly higher CPI.
 Lastly, further increase to cache line, increases CPI.
 Improvement: l2-miss-rate dropped from 28% to 16%
 
 #### [2.1.2] Improve speccmf benchmark's CPI
+
+Simulations are presented in _speccmf_better_CPI_
 Best CPI(1.109538--->1.062561) was achieved for:
 * l1d_size = 128KB
 * l1i_size = 32KB
@@ -135,6 +108,8 @@ Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
 (We also observe with l1d_assoc = 16 and cache line=512 we achieve the same CPI, but it would be more expensive (see questions part 3))
 
 #### [2.1.3] Improve spechmmer benchmark's CPI
+
+Simulations are presented in _spechmmer_better_CPI_
 Best CPI(1.184534--->1.178156) was achieved for:
 * l1d_size = 128KB
 * l1i_size = 64KB
