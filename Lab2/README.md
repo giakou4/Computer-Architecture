@@ -68,7 +68,7 @@ We also observe that having 2 times better clock, does not make the benchmarks r
 | specmcf     | 64KB   	 | 	 2        | 128KB    	| 16        | 4MB     | 8        |     512     |     1.109538 < 1.062561|    4% |
 | spechmmer  	| 64KB   	 | 	 2        | 128KB    	| 8        	| 1MB     | 4        |     256     | 1.184534 < 1.178156  |    0.5%  |
 | specsjeng   | 128KB  	 | 	 2        | 128KB    	| 4        	| 4MB     | 16       |     2048    | 10.270810 < 2.636428 |   77%  |
-| specslibm	  | 0KB   	 | 	 0        | 0KB      	| 0        	| 0MB     | 0        |     0       |    3.493611 < 0   |  0%    |
+| specslibm	  | 128KB  	 | 	 2        | 128KB    	| 2        	| 1MB     | 2        |     2048       |    3.493611 < .1373999   |  47%    |
 
 Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ]
 
@@ -126,6 +126,16 @@ The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate tho
 
 #### [2.2.5] _speclibm_ BENCHMARK'S CPI 
 
+Same as [2.2.4]:
+At first, L1 instruction misses were very low so we kept l1_assoc at 2 but we increased the l1i_size to maximum possible (128KB) for slightly beter results. 
+We also increased l1d_size to maximum possible (128KB) for better results, so we did with the l2_size = 4MB
+Then we tried different l1d_assoc (2,4,8) but the CPI remained the same. We can assume that collision do not happen often so increasing associativity does not avoid those collisions.
+Regarding l2_assoc we tried different values (2,4,8,16) but the CPI remained the same, possible for the above reason.
+Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) because by increasing the cache_line the CPI was getting lower and lower.
+
+Noticeable improvement: dcache-miss-rate dropped from 26% to 13%
+
+The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate though remain the same. I can not get rid of misses, but i can transfer larger blocks to l1 where the l1-cache miss-rate is near 0% for both instruction and data.
 
 #### Important Note
 
@@ -156,14 +166,14 @@ Based on the cost of the circuit, in order to achieve the best CPI with the lowe
 
 | Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | improvement |
 | ----------- | -------- | ---------- | --------- | ----------| ------- | -------- | ----------  |------------ | 
-| specbzip	  | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
-| specmcf     | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
-| spechmmer  	| 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
-| specsjeng   | 128KB  	 | 	 2        | 128      	| 4        	| 1MB     | 16       |     256     |  77% --->63% |
-| specslibm	  | 32KB   	 | 	 2        | 64      	| 4        	| 2MB     | 8        |     64      | 0% --->0%   |
+| specbzip	  | 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
+| specmcf     | 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
+| spechmmer  	| 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
+| specsjeng   | 128KB  	 | 	 2        | 128KB   	| 4        	| 1MB     | 16       |     256     |  77% --->63% |
+| specslibm	  | 32KB   	 | 	 2        | 32KB     	| 2        	| 1MB     | 8        |     64      | 0% --->37%   |
 
 We do not present any calculations for the choices because the initial size of L2 was 2MB and the best was 4MB. The cost is already very high so we prefer the default. Despite that, the improvement for the first 3 is very low, so we had better do nothing.
-For the 4th benchmark specsjeng, by decreasing the L2 cache size to 1MB we benefit a lot regarding the cost. We choose this option with no calculations too.
+For the 4th and 5th benchmark (specsjeng and specslibm) by decreasing the L2 cache size to 1MB we benefit a lot regarding the cost. We choose this option with no calculations too.
 
 #### Important Note
 
