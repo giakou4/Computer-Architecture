@@ -59,8 +59,11 @@ We also observe that having 2 times better clock, does not make the benchmarks r
 
 ## PART 2
 
-### [2.1] IMPROVE BENCHMARKS' CPI
+#### Important Note
 
+All simulations are held in the relative folders <benchmarks_name>_improvement.
+
+### [2.1] IMPROVE BENCHMARKS' CPI
 
 | Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | CPI    | improvement | 
 | ----------- | -------- | ---------- | --------- | ----------| ------- | -------- | ----------  |------- | ----------- | 
@@ -189,10 +192,6 @@ Based on the cost of the circuit, in order to achieve the best CPI with the lowe
 
 We do not present any calculations for the choices because the initial size of L2 was 2MB and the best was 4MB. The cost is already very high so we prefer the default. Despite that, the improvement for the first 3 is very low, so we had better do nothing.
 For the 4th and 5th benchmark (specsjeng and specslibm) by decreasing the L2 cache size to 1MB we benefit a lot regarding the cost. We choose this option with no calculations too.
-
-#### Important Note
-
-All simulations are held in the relative folders <benchmarks_name>_better_CPI.
 
 ## CONCLUSION
 
