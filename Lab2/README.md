@@ -74,6 +74,12 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ]
 
 ### [2.2] DESCRIPTION OF CHANGES & GRAPHS 
 
+#### Important Note for Graphs
+
+0-value represents the default value (see [1.1])
+1-value is 2x the default value. 2-value is 4x the default value and so on.
+-1-value is /2 the default value. -2-value is /4 the default value and so on.
+
 #### [2.2.1] _specbzip_ BENCHMARK'S CPI
 
 Due to low l1 instruction misses, we increased the L1 data cache to 128KB which was the maximus possible. We tried different associativities for L1 data cache (4,8,16,32) with l1d_assoc = 16 giving the best CPI.  
@@ -113,7 +119,7 @@ In general, the improvement to the CPI was 1 in every 100 cycles.
 
 Noticeable improvement: None
 
-We could not take advantage of locality or bigger size of cache, because the miss-errors were fixed and CPI was already very low. The sall difference is due to the new l2_assoc, which saves us from some misses.
+We could not take advantage of locality or bigger size of cache, because the miss-errors were fixed and CPI was already very low. The only difference is due to the new l2_assoc, which saves us from some misses.
 
 ![spechmmer](https://user-images.githubusercontent.com/57758089/69645083-43e8d200-106e-11ea-9b2d-bf452ad6ecf8.png)
 
@@ -146,7 +152,7 @@ The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate tho
 
 ![speclibm](https://user-images.githubusercontent.com/57758089/69645081-43e8d200-106e-11ea-9fec-5e72e5cc1d1e.png)
 
-#### Important Note
+#### Important Note 
 
 Most of the times we used the the maximum possible size for l1 cache (128KB) due to the fact that we could reduce any compulsory misses by changing associativity. That means, instead of using l1 cache 64KB 2-way associative, we could use 128KB 4-way associative, since the cost was not a problem at PART 1. With that in mind, we had fixed values for l1d and l1i cache size.
 
