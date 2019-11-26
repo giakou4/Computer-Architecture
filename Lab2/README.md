@@ -55,7 +55,7 @@ We observe that in both executions, system.clk_domain = 1000 (line 289) but syst
 For 1 GHz,  system.cpu_clk_domain.clock = 500 means 500 ticks / cpu cycle = 1 GHz
 For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GHz
 
-We also observe that having 2 times better clock, does not make the benchmarks run twice faster, but it is very close to double it. As a result we could say that there is no perfect scaling. Another reason for that is bubbles. We can not affect the duarion of bubbles by having a better clock. That is why the benchmarks do not run twice faster, but twice plus something more.
+We also observe that having 2 times better clock, does not make the benchmarks run twice faster, but it is very close to it. Perfect scaling does not due to the existance of *bubles* . Bubbles create stall, and the duration of stalls does not depend on the CPU's clock. For example, when the cache misses, you hit DRAM. Without any change in the DRAM controller, that miss takes just as much real time as the miss with the slower processor — same speed memory — but bcause of the faster processor, you’re missing more potential work.
 
 ## PART 2
 
@@ -103,6 +103,7 @@ We also increased l1d_size to maximum possible (128KB) for better results. The l
 By increasing l2 size, CPI was decreasing, with a better result at 1MB. The same CPI was achieved for 4MB too, but lower size is prefered due to lower cost and complexity(see QUESTIONS PART 3).
 Lastly, cache line 256 gave quite lower CPI.  
 In general, the improvement to the CPI was 1 in every 100 cycles.
+
 We could not take advantage of locality or bigger size of cache, because the miss-errors were fixed and CPI was already very low.
 
 #### [2.2.4] _specsjeng_ BENCHMARK'S CPI 
@@ -111,9 +112,13 @@ At first, L1 instruction misses were very low so we kept l1_assoc at 2 but we in
 We also increased l1d_size to maximum possible (128KB) for better results, so we did with the l2_size = 4MB
 Then we tried different l1d_assoc (2,4,8) but the CPI remained the same. We can assume that collision do not happen often so increasing associativity does not avoid those collisions.
 Regarding l2_assoc we tried different values (2,4,8,16) but the CPI remained the same, possible for the above reason.
-Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) because by increasing the cache_line the CPI was getting lower and lower. We can assume that bringing more data in every miss we have a better CPI. But the l2 miss-rate remains the same, so we just benefit for L1 cache.
+Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) because by increasing the cache_line the CPI was getting lower and lower.
+
+We can assume that bringing more data in every miss we have a better CPI. But the l2 miss-rate remains the same, so we just benefit for L1 cache.
 
 #### [2.2.5] _speclibm_ BENCHMARK'S CPI 
+
+
 
 ## PART 3
 
