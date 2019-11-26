@@ -37,7 +37,7 @@ Results are presented in _spec_results1_/_Results1.txt_
 
 <img src="https://user-images.githubusercontent.com/57758089/69497218-289d8b80-0ee3-11ea-941f-44a5df382299.png" alt="CPI" width="500" height="300">
 
-We observe that the instruction cache miss-rate is near 0%,  while data miss-rate is <13%. The l2 cache miss-rate though is very high, especially for speclibm specmcf and specsjeng, despite the fact that l2 cache is 2MB 8-way assiciativity. The higher the miss-rate, the higher the CPI(many misses result more acceses to memory, more acceses to memory result more cycles to fetch data). The specsjeng has the highest data cache and l2 cache miss rate and the highest CPI.
+We observe that the instruction cache miss-rate is near 0%,  while data miss-rate is <13%. The l2 cache miss-rate though is very high, especially for speclibm specmcf and specsjeng, despite the fact that l2 cache is 2MB 8-way assiciativity. The specsjeng has the highest data cache and l2 cache miss rate and the highest CPI.
 
 ### [1.3] RUN BECNCHMARKS WITH _cpu-clock=2GHz_
 
@@ -55,7 +55,7 @@ We observe that in both executions, system.clk_domain = 1000 (line 289) but syst
 For 1 GHz,  system.cpu_clk_domain.clock = 500 means 500 ticks / cpu cycle = 1 GHz
 For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GHz
 
-We also observe that having 2 times better clock, does not make the benchmarks run twice faster, but it is very close to double it. As a result we could say that there is no perfect scaling.
+We also observe that having 2 times better clock, does not make the benchmarks run twice faster, but it is very close to double it. As a result we could say that there is no perfect scaling. Another reason for that is bubbles. We can not affect the duarion of bubbles by having a better clock. That is why the benchmarks do not run twice faster, but twice plus something more.
 
 ## PART 2
 
