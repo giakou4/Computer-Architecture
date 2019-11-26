@@ -75,7 +75,7 @@ All simulations are held in the relative folders <benchmarks_name>_improvement.
 
 Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ]
 
-### [2.2] DESCRIPTION OF CHANGES & GRAPHS 
+### [2.2] EXPLANATION OF CHANGES & GRAPHS 
 
 #### Important Note for Graphs
 
