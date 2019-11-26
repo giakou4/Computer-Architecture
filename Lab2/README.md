@@ -79,9 +79,9 @@ Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ]
 
 #### Important Note for Graphs
 
-0-value represents the default value (see [1.1])
-1-value is 2x the default value. 2-value is 4x the default value and so on.
--1-value is /2 the default value. -2-value is /4 the default value and so on.
+* 0-value represents the default value (see [1.1])
+* 1-value is 2x the default value. 2-value is 4x the default value and so on.
+* -1-value is /2 the default value. -2-value is /4 the default value and so on.
 
 #### [2.2.1] _specbzip_ BENCHMARK'S CPI
 
