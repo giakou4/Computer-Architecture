@@ -174,7 +174,7 @@ where
 Transistors' cost has changed over the years.
 In 1968 the average cost was 1, in 2002, the average cost was 0.00000026 source: [singularity.com](singularity.com)
 
-Based on this function, the associativity does not affect the circuit complexity, due to the fact that the MUXs' number of transistors does not increase much. But, the higher the bits of cache, the more complex the circuit. Note that in cache we use from many KB to some MB.
+Based on this function, the associativity does not affect the circuit complexity, due to the fact that the MUXs' number of transistors does not increase the total number of transistors much. So, the higher the bits of cache, the more complex the circuit. Note that in cache we use from many KB(L1) to some MB(L2).
 
 The cost from the other hand can be defined with a similar function but with higher gravity to L1 cache's cost because L1 must be faster and smaller than the L2.
 Regarding the speed, as mentioned before, L1(data and instruction) is faster than L2.
