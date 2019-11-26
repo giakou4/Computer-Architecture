@@ -188,7 +188,7 @@ Based on the cost of the circuit, in order to achieve the best CPI with the lowe
 | specbzip	  | 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
 | specmcf     | 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
 | spechmmer  	| 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
-| specsjeng   | 128KB  	 | 	 2        | 128KB   	| 4        	| 1MB     | 16       |     256     |  77% --->63% |
+| specsjeng   | 32KB  	 | 	 2        | 64KB   	| 4        	| 1MB     | 16       |     256     |  77% --->63% |
 | specslibm	  | 32KB   	 | 	 2        | 32KB     	| 2        	| 1MB     | 8        |     64      | 0% --->37%   |
 
 We do not present any calculations for the choices because the initial size of L2 was 2MB and the best was 4MB. The cost is already very high so we prefer the default. Despite that, the improvement for the first 3 is very low, so we had better do nothing.
