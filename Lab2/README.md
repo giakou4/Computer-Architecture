@@ -65,7 +65,7 @@ All simulations are held in the relative folders <benchmarks_name>_improvement.
 
 ### [2.1] IMPROVE BENCHMARKS' CPI
 
-| Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | CPI    | improvement | 
+| Benchmarks	| l1i_size |	l1i_assoc | l1d_size	|l1d_assoc	| l2_size | l2_assoc | cache-line  | CPI (default<improved)| improvement | 
 | ----------- | -------- | ---------- | --------- | ----------| ------- | -------- | ----------  |------- | ----------- | 
 | specbzip	  | 64KB   	 | 	 2        | 128KB     | 16      	| 4MB     | 8        |     256     |  1.613367 < 1.543471 |   4%  |
 | specmcf     | 64KB   	 | 	 2        | 128KB    	| 16        | 4MB     | 8        |     512     |     1.109538 < 1.062561|    4% |
@@ -188,10 +188,10 @@ Based on the cost of the circuit, in order to achieve the best CPI with the lowe
 | specbzip	  | 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
 | specmcf     | 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
 | spechmmer  	| 32KB   	 | 	 2        | 64KB    	| 4        	| 2MB     | 8        |     64      | 4% --->0%   |
-| specsjeng   | 32KB  	 | 	 2        | 64KB   	| 4        	| 1MB     | 16       |     256     |  77% --->63% |
-| specslibm	  | 32KB   	 | 	 2        | 32KB     	| 2        	| 1MB     | 8        |     64      | 0% --->37%   |
+| specsjeng   | 32KB  	 | 	 2        | 64KB   	 | 4        	| 1MB     | 16       |     256     |  77% --->63% |
+| specslibm	  | 32KB   	 | 	 2        | 32KB     	| 2        	| 1MB     | 8        |     64      | 47% --->37%   |
 
-We do not present any calculations for the choices because the initial size of L2 was 2MB and the best was 4MB. The cost is already very high so we prefer the default. Despite that, the improvement for the first 3 is very low, so we had better do nothing.
+We do not present any calculations for the choices because: for the first 3 benchmarks, the initial size of L2 was 2MB and the best was 4MB. The cost is already very high so we prefer the default. Despite that, the improvement for the first 3 is very low, so we had better do nothing.
 For the 4th and 5th benchmark (specsjeng and specslibm) by decreasing the L2 cache size to 1MB we benefit a lot regarding the cost. We choose this option with no calculations too.
 
 ## CONCLUSION
