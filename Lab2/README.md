@@ -80,7 +80,8 @@ Due to low l1 instruction misses, we increased the L1 data cache to 128KB which 
 By increasing cache line to 256 we got slightly better CPI.  
 Then we tried different L2 cache size. The highest possible (4MB) gave better results(1.54371) with L2 associativity equals to 8. Different associativity gave slightly higher CPI.
 Lastly, further increase to cache line, increased CPI.
-Noticeable improvement: l2-miss-rate dropped from 28% to 16%
+
+Noticeable improvement: l2-miss-rate dropped from 28% to 16% and dcache-miss-rate dropped from 1.4% to 0.8%
 
 Bigger cache line(bigger block size transfered to memory) resulted a better CPI. That could be a consequence of the benchmark's data locality.
 Higher l1d_assoc(and l2_assoc) means that the data conflict quite frequent and with l1d_assoc=16(l2_assoc=8) we reduce the number of conflicts.
@@ -94,6 +95,8 @@ Increasing cache line improved CPI.
 L2 cache associativity also did not seem to affect CPI, so we kept it to 8
 Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
 
+Noticeable improvement: l2-miss-rate dropped from 72% to 29% and dcache-miss-rate dropped from 0.2% to 0.0%
+
 Increasing l1d_assoc and cache-line, increased the CPI because the L2 miss-rate was increased due to the fact that we did not exploit locality with the correct way(we did not need so many words from L2 cache).
 
 #### [2.2.3] _spechmmer_ BENCHMARK'S CPI
@@ -104,6 +107,8 @@ By increasing l2 size, CPI was decreasing, with a better result at 1MB. The same
 Lastly, cache line 256 gave quite lower CPI.  
 In general, the improvement to the CPI was 1 in every 100 cycles.
 
+Noticeable improvement: None
+
 We could not take advantage of locality or bigger size of cache, because the miss-errors were fixed and CPI was already very low.
 
 #### [2.2.4] _specsjeng_ BENCHMARK'S CPI 
@@ -113,6 +118,8 @@ We also increased l1d_size to maximum possible (128KB) for better results, so we
 Then we tried different l1d_assoc (2,4,8) but the CPI remained the same. We can assume that collision do not happen often so increasing associativity does not avoid those collisions.
 Regarding l2_assoc we tried different values (2,4,8,16) but the CPI remained the same, possible for the above reason.
 Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) because by increasing the cache_line the CPI was getting lower and lower.
+
+Noticeable improvement: dcache-miss-rate dropped from 12% to 0.3%
 
 We can assume that bringing more data in every miss we have a better CPI. But the l2 miss-rate remains the same, so we just benefit for L1 cache.
 
