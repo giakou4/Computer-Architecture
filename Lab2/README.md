@@ -83,13 +83,13 @@ Lastly, further increase to cache line, increased CPI.
 
 Noticeable improvement: l2-miss-rate dropped from 28% to 16% and dcache-miss-rate dropped from 1.4% to 0.8%
 
-Bigger cache line(bigger block size transfered to memory) resulted a better CPI. That could be a consequence of the benchmark's data locality.
-Higher l1d_assoc(and l2_assoc) means that the data conflict quite frequent and with l1d_assoc=16(l2_assoc=8) we reduce the number of conflicts.
+Bigger cache line (bigger block size transfered to memory) resulted a better CPI. That could be a consequence of the benchmark's data locality.
+Higher l1d_assoc, l2_assoc and l2_size means that the data conflict quite frequent and with the specific values we reduce the number of conflicts. Yet, the conflicts are not reduced much, so the CPI drops 4%.
 
 
 #### [2.2.2] _speccmf_ BENCHMARK'S CPI
 
-Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. l1i_assoc was just increased to 64KB which was enough(could be 128KB aswell).
+Due to low l1 instruction misses, we increased the l1 data cache to 128KB which was the maximus possible. l1i_assoc was increased to 64KB which was enough(could be 128KB aswell).
 We tried different associativities for l1 data cache (2,4,8), with the best CPI at l1d_size = 16
 Increasing cache line improved CPI.
 L2 cache associativity also did not seem to affect CPI, so we kept it to 8
@@ -97,7 +97,8 @@ Lastly we gave the maximum possible l2 cache size of 4MB due to high l2 misses.
 
 Noticeable improvement: l2-miss-rate dropped from 72% to 29% and dcache-miss-rate dropped from 0.2% to 0.0%
 
-Increasing l1d_assoc and cache-line, increased the CPI because the L2 miss-rate was increased due to the fact that we did not exploit locality with the correct way(we did not need so many words from L2 cache).
+Increasing l1d_assoc and cache-line, increased the CPI because the L2 miss-rate was increased due to the fact that we did not exploit locality with the correct way (we did not need so many words from L2 cache).
+Also, increasing l2_size to 4MB allowed more data to be stored each time. l2-miss-rate used to be high due to many misses (conflicts, no locality) which was reduced from 72% to 29% with those changes.
 
 #### [2.2.3] _spechmmer_ BENCHMARK'S CPI
 
@@ -109,7 +110,7 @@ In general, the improvement to the CPI was 1 in every 100 cycles.
 
 Noticeable improvement: None
 
-We could not take advantage of locality or bigger size of cache, because the miss-errors were fixed and CPI was already very low.
+We could not take advantage of locality or bigger size of cache, because the miss-errors were fixed and CPI was already very low. The sall difference is due to the new l2_assoc, which saves us from some misses.
 
 #### [2.2.4] _specsjeng_ BENCHMARK'S CPI 
 
@@ -121,11 +122,14 @@ Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) 
 
 Noticeable improvement: dcache-miss-rate dropped from 12% to 0.3%
 
-We can assume that bringing more data in every miss we have a better CPI. But the l2 miss-rate remains the same, so we just benefit for L1 cache.
+The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate though remain the same. I can not get rid of misses, but i can transfer larger blocks to l1 where the l1-cache miss-rate is near 0% for both instruction and data.
 
 #### [2.2.5] _speclibm_ BENCHMARK'S CPI 
 
 
+#### Important Note
+
+Most of the times we used the the maximum possible size for l1 cache (128KB) due to the fact that we could reduce any compulsory misses by changing associativity. That means, instead of using l1 cache 64KB 2-way associative, we could use 128KB 4-way associative, since the cost was not a problem at PART 1. With that in mind, we had fixed values for l1d and l1i cache size.
 
 ## PART 3
 
