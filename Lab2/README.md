@@ -71,7 +71,7 @@ All simulations are held in the relative folders <benchmarks_name>_improvement.
 | specmcf     | 64KB   	 | 	 2        | 128KB    	| 16        | 4MB     | 8        |     512     |     1.109538 < 1.062561|    4% |
 | spechmmer  	| 64KB   	 | 	 2        | 128KB    	| 8        	| 1MB     | 4        |     256     | 1.184534 < 1.178156  |    0.5%  |
 | specsjeng   | 128KB  	 | 	 2        | 128KB    	| 4        	| 4MB     | 16       |     2048    | 10.270810 < 2.636428 |   77%  |
-| specslibm	  | 128KB  	 | 	 2        | 128KB    	| 2        	| 1MB     | 2        |     2048       |    3.493611 < .1373999   |  47%    |
+| specslibm	  | 128KB  	 | 	 2        | 128KB    	| 2        	| 1MB     | 2        |     2048       |    3.493611 < 1.373999   |  47%    |
 
 Improvement = [ CPI(old) - CPI(new) ] / [ CPI(old) ]
 
