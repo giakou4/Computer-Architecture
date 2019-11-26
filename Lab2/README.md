@@ -86,6 +86,7 @@ Noticeable improvement: l2-miss-rate dropped from 28% to 16% and dcache-miss-rat
 Bigger cache line (bigger block size transfered to memory) resulted a better CPI. That could be a consequence of the benchmark's data locality.
 Higher l1d_assoc, l2_assoc and l2_size means that the data conflict quite frequent and with the specific values we reduce the number of conflicts. Yet, the conflicts are not reduced much, so the CPI drops 4%.
 
+![specbzip](https://user-images.githubusercontent.com/57758089/69645086-44816880-106e-11ea-8a3d-d658f159f66b.png)
 
 #### [2.2.2] _speccmf_ BENCHMARK'S CPI
 
@@ -100,6 +101,8 @@ Noticeable improvement: l2-miss-rate dropped from 72% to 29% and dcache-miss-rat
 Increasing l1d_assoc and cache-line, increased the CPI because the L2 miss-rate was increased due to the fact that we did not exploit locality with the correct way (we did not need so many words from L2 cache).
 Also, increasing l2_size to 4MB allowed more data to be stored each time. l2-miss-rate used to be high due to many misses (conflicts, no locality) which was reduced from 72% to 29% with those changes.
 
+![speccmf](https://user-images.githubusercontent.com/57758089/69645088-4519ff00-106e-11ea-9f98-7a792ee13d89.png)
+
 #### [2.2.3] _spechmmer_ BENCHMARK'S CPI
 
 At first, L1 instruction misses were very low so we kept l1_assoc at 2 but we increased the l1i_size to maximum possible (128KB) for slightly beter results.
@@ -111,6 +114,8 @@ In general, the improvement to the CPI was 1 in every 100 cycles.
 Noticeable improvement: None
 
 We could not take advantage of locality or bigger size of cache, because the miss-errors were fixed and CPI was already very low. The sall difference is due to the new l2_assoc, which saves us from some misses.
+
+![spechmmer](https://user-images.githubusercontent.com/57758089/69645083-43e8d200-106e-11ea-9b2d-bf452ad6ecf8.png)
 
 #### [2.2.4] _specsjeng_ BENCHMARK'S CPI 
 
@@ -124,6 +129,8 @@ Noticeable improvement: dcache-miss-rate dropped from 12% to 0.3%
 
 The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate though remain the same. I can not get rid of misses, but i can transfer larger blocks to l1 where the l1-cache miss-rate is near 0% for both instruction and data.
 
+![specsjeng](https://user-images.githubusercontent.com/57758089/69645089-4519ff00-106e-11ea-96a3-294665e73c67.png)
+
 #### [2.2.5] _speclibm_ BENCHMARK'S CPI 
 
 Same as [2.2.4]:
@@ -136,6 +143,8 @@ Lastly we tried many values for cache_lines (32, 64 ,128, 256, 512, 1024, 2048) 
 Noticeable improvement: dcache-miss-rate dropped from 26% to 13%
 
 The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate though remain the same. I can not get rid of misses, but i can transfer larger blocks to l1 where the l1-cache miss-rate is near 0% for both instruction and data.
+
+![speclibm](https://user-images.githubusercontent.com/57758089/69645081-43e8d200-106e-11ea-9fec-5e72e5cc1d1e.png)
 
 #### Important Note
 
