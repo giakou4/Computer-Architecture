@@ -56,6 +56,8 @@ We observe that in both executions, system.clk_domain = 1000 (line 289) but syst
 For 1 GHz,  system.cpu_clk_domain.clock = 500 means 500 ticks / cpu cycle = 1 GHz
 For 2GHz  system.cpu_clk_domain.clock = 1000 means 1000 ticks / cpu cycle = 2 GHz
 
+The difference between those two clock is that cpu-clock refers to the actual clock of the cpu, while sys-clock refers to the clock of peripherals. What we focus on here is the CPU's clock.
+
 We also observe that having a clock twice as fast, does not make the benchmarks run twice faster, but it is very close to it. Perfect scaling does not exist due to the presence of *bubbles* . Bubbles create stall, and the duration of stalls does not depend on the CPU's clock. For example, when the cache misses, you hit DRAM. Without any change in the DRAM controller, that miss takes just as much real time as the miss with the slower processor — same speed memory — but because of the faster processor, we are missing more potential work.
 
 ## PART 2
