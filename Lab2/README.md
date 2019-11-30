@@ -6,7 +6,7 @@ Then we made a call to that function and waited for the commands to be executed.
 
 ## PART 1
 
-Running benchmarks with default cpu-clock, L1 instruction cache size and associativity , L1 data cache size and associativity,
+Running benchmarks with cpu-clock=1GHz, L1 instruction cache size and associativity , L1 data cache size and associativity,
 L2 cache size and associativity and cache line
 
 ### [1.1] FINDING SOME PARAMETERS
@@ -20,7 +20,7 @@ from _config.ini_ we can find the requested parameters:
 * L2 cache associativity: 8 (ine 998)
 * cache line size: 64 (line 15)
 
-### [1.2] RESULTS
+### [1.2] RESULTS cpu-clock=1GHz
 
 Results are presented in _spec_results1_/_Results1.txt_
 
