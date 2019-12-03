@@ -159,7 +159,7 @@ The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate tho
 
 ![speclibm](https://user-images.githubusercontent.com/57758089/69645081-43e8d200-106e-11ea-9fec-5e72e5cc1d1e.png)
 
-#### Notw about cache-line
+#### Note about cache-line
 
 Bigger cache-line exploits more spatial locality.
 Large cache lines effectively prefetch data that we have not explicitly asked for.
