@@ -159,6 +159,13 @@ The CPI was significantly reduced by increasing the cache-libe. l2-miss-rate tho
 
 ![speclibm](https://user-images.githubusercontent.com/57758089/69645081-43e8d200-106e-11ea-9fec-5e72e5cc1d1e.png)
 
+#### Notw about cache-line
+
+Bigger cache-line exploits more spatial locality.
+Large cache lines effectively prefetch data that we have not explicitly asked for.
+Smaller cache-line focuses on temporal locality.
+If there is little spatial locality, large cache lines waste space and bandwidth.
+
 #### Important Note 
 
 Most of the times we used the the maximum possible size for L1 cache (128KB) due to the fact that we could reduce any compulsory misses by changing associativity. That means, instead of using L1 cache 64KB 2-way associative, we could use 128KB 4-way associative, since the cost was not a problem at PART 1. With that in mind, we had fixed values for l1d and l1i cache size.
@@ -174,7 +181,7 @@ where
 
 > A1 = B1 = C1 = 6 transistors / bit  
 > A2, B2, C2 depends on the associativity(for direct mapped equals 0 , for 2,4-way equals 24, for 4+ equals no_of_muxs*24)  
-> D is the cost of the wire for the cache line  
+> D is the cost of the MUX of the cache line  
 
 Transistors' cost has changed over the years.
 In 1968 the average cost was 1, in 2002, the average cost was 0.00000026 source: [singularity.com](singularity.com)
