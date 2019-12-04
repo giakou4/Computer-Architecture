@@ -190,6 +190,7 @@ Based on this function, the associativity does not affect the circuit complexity
 
 The cost from the other hand can be defined with a similar function but with higher gravity to L1 cache's cost because L1 must be faster and smaller than the L2.
 Regarding the speed, as mentioned before, L1(data and instruction) is faster than L2.
+Increasing associativity reduces speed because the MUX delays to change state.
 
 Based on the cost of the circuit, in order to achieve the best CPI with the lower cost we make the following choices:
 
