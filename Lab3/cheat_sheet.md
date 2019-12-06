@@ -9,6 +9,7 @@ git clone https://github.com/kingmouf/cmcpat.git my_mcpat
 sudo apt install libc6-dev-i386
 sudo apt install gcc-7-multilib g++-7-multilib
 
+cd my_mcpat
 make
 ```
 
