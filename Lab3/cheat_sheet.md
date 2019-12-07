@@ -32,3 +32,13 @@ GEM5toMcPAT.py [options] <gem5 stats file> <gem5 config file (json)> <mcpat temp
 print_energy.py [options] <mcpat output file> <gem5 stats file> 
 ```
 
+# TESTS
+
+```
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzip/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzip/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/scepbzip_def.xml
+
+./mcpat -infile my_cpu111.xml -print_level 1 > results.txt
+```
+
+
+
