@@ -14,7 +14,7 @@
 
 So
 
-> Dynamic_Power ~ 1/2 x Capacity_Load x Voltage^2 x Frequency switched
+> Dynamic_Power ~ 1/2 x (Capacity Load) x (Voltage)(^2) x (Frequency switched)
 
 Source : [Computer Architecture by Hennesy and Patterson](https://www.sciencedirect.com/topics/computer-science/dynamic-power)
 
