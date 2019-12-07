@@ -22,7 +22,19 @@ The capacitive load is a function of the number of transistors connected to an o
 Running the same programm twice for example (higher run-time), will result in more leakage (the current leaked will be dobuled) but the dynamic power will not change(frequency, voltage, capacity load = ct).
 
 
-### [1.2] 
+### [1.2] 5W vs 40W battery
+
+With a first glance we would say that the 40W CPU would consume more power than the 5W CPU. We have not taken into consideration, though, the energy efficiency of each CPU:
+
+* For leakage power, we can use transistors that are less leaky. The downside of this is that these transistors are slower to switch, and therefore your circuit will run slower.
+* For dynamic power, we need to reduce the frequency at which the transistors switch. Some examples are:
+ * Slowing down (or even turning off) the clock when appropriate (e.g. when a CPU is iddle)
+ * Isolating sections of logic when they are not used, preventing them from seeing changes on a particular signal that is changing frequently
+* In both cases, reducing the power supply voltage also helps reducing power consumption because power is proportional to square of voltage (P=V^2/R). This also causes the transistors to switch more slowly.
+
+If the 40W CPU takes advantages of all these, while to 5W CPU does not, the battery of the 40W CPU may last longer.
+
+
 
 ### [1.3] 
 
