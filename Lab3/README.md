@@ -14,7 +14,7 @@
 
 So
 
-Dynamic_Power ~ 1/2 x Capacity_Load x Voltage^2 x Frequency switched
+> Dynamic_Power ~ 1/2 x Capacity_Load x Voltage^2 x Frequency switched
 
 Source : [Computer Architecture by Hennesy and Patterson](https://www.sciencedirect.com/topics/computer-science/dynamic-power)
 
@@ -36,8 +36,7 @@ If the 40W CPU takes advantages of all these, while to 5W CPU does not, the batt
 
 ### [1.3] Xeon vs ARM-9
 
-We run the Xeon and ARM9 2GHz in McPAT.
-The results are the followings:
+We run Xeon and ARM9 2GHz in McPAT.
 
 |                                          | ARM-9 2GHz | XEON 3.4GHz |
 |------------------------------------------|-----------|-------------|
