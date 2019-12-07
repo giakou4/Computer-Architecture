@@ -19,3 +19,16 @@ make
 ./mcpat -infile my_cpu.xml -print_level 1 > results.txt
 ```
 
+## GEM5 to McPAT
+```
+GEM5toMcPAT.py [options] <gem5 stats file> <gem5 config file (json)> <mcpat template xml file> -o <output xml file>
+```
+-h, --help	show help message and exit
+-q, --quiet	don't print status messages to stdout
+
+## McPAT print_energy
+
+```
+print_energy.py [options] <mcpat output file> <gem5 stats file> 
+```
+
