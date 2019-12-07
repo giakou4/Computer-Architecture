@@ -34,9 +34,31 @@ With a first glance we would say that the 40W CPU would consume more power than 
 
 If the 40W CPU takes advantages of all these, while to 5W CPU does not, the battery of the 40W CPU may last longer.
 
-
-
 ### [1.3] 
+
+We run the Xeon and ARM9 2GHz in McPAT.
+The results are the followings:
+
+|                                          | ARM9 2GHz | XEON 3.4GHz |
+|------------------------------------------|-----------|-------------|
+| Lithography                              | 40 nm     | 65nm        |
+| Area                                     | 5.39 mm^2 | 410.50 mm^2 |
+| Peak Power                               | 1.74 W    | 134.93 W    |
+| Total Leakage                            | 0.10 W    | 36.83 W     |
+| Peak Dyamic                              | 1.63 W    | 98.10 W     |
+| Subthreshold Leakage                     | 0.05 W    | 35.16 W     |
+| Substhreshhold Leakage with power gating |           | 16.39 W     |
+| Gate Leakage                             | 0.05 W    | 1.66 W      |
+| Runtime Dynamic                          | 2.96 W    | 72.91 W     |
+
+Taking into consideration that Xeon is 40 times faster than ARM9, in order to get the most efficient CPU we take the ratio
+K = Energy(Xeon) / Energy(ARM9), where
+Energy = (Total Leakage + Runtime Dynamic) * runtime
+so
+K = (109.74 / 3.06) * 1/40 = 0.89 
+which means that if Xeon is 40 times faster, Xeon is more energy efficient.
+
+
 
 ## STEP 2
 
