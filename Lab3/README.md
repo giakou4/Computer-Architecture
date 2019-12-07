@@ -59,7 +59,15 @@ which means that if Xeon is 40 times faster, Xeon is more energy efficient.
 
 ## STEP 2
 
+Minimize Enery-Delay-Area Product (EDAP)
+
 ### [2.1] 
+
+EDAP = Energy x Delay x Area
+
+* Area: obvious
+* Energy [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * runtime(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
+* Delay: Propagation delay aka Gate Delay is the length of time which starts when the input to a logic gate becomes stable and valid to change, to the time that the output of that logic gate is stable and valid to change. 
 
 ### [2.2] 
 
