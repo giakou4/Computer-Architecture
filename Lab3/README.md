@@ -14,7 +14,7 @@
 
 So
 
-Dynamic_Power ¬ 1/2 x Capacity_Load x Voltage^2 x Frequency switched
+Dynamic_Power ~ 1/2 x Capacity_Load x Voltage^2 x Frequency switched
 
 Source : [Computer Architecture by Hennesy and Patterson](https://www.sciencedirect.com/topics/computer-science/dynamic-power)
 
@@ -28,8 +28,8 @@ With a first glance we would say that the 40W CPU would consume more power than 
 
 * For leakage power, we can use transistors that are less leaky. The downside of this is that these transistors are slower to switch, and therefore your circuit will run slower.
 * For dynamic power, we need to reduce the frequency at which the transistors switch. Some examples are:
- * Slowing down (or even turning off) the clock when appropriate (e.g. when a CPU is iddle)
- * Isolating sections of logic when they are not used, preventing them from seeing changes on a particular signal that is changing frequently
+  * Slowing down (or even turning off) the clock when appropriate (e.g. when a CPU is iddle)
+  * Isolating sections of logic when they are not used, preventing them from seeing changes on a particular signal that is changing frequently
 * In both cases, reducing the power supply voltage also helps reducing power consumption because power is proportional to square of voltage (P=V^2/R). This also causes the transistors to switch more slowly.
 
 If the 40W CPU takes advantages of all these, while to 5W CPU does not, the battery of the 40W CPU may last longer.
@@ -51,19 +51,12 @@ The results are the followings:
 | Gate Leakage                             | 0.05 W    | 1.66 W      |
 | Runtime Dynamic                          | 2.96 W    | 72.91 W     |
 
-Taking into consideration that Xeon is 40 times faster than ARM9, in order to get the most efficient CPU we take the ratio
-
-K = Energy(Xeon) / Energy(ARM9), where
-
-Energy = (Total Leakage + Runtime Dynamic) * runtime
-
-so
-
-K = (109.74 / 3.06) * 1/40 = 0.89 
-
-which means that if Xeon is 40 times faster, Xeon is more energy efficient.
-
-
+Taking into consideration that Xeon is 40 times faster than ARM9, in order to get the most efficient CPU we take the ratio   
+K = Energy(Xeon) / Energy(ARM9), where  
+Energy = (Total Leakage + Runtime Dynamic) * runtime  
+so  
+K = (109.74 / 3.06) * 1/40 = 0.89  
+which means that if Xeon is 40 times faster, Xeon is more energy efficient.  
 
 ## STEP 2
 
