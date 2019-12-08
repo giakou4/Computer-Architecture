@@ -76,7 +76,7 @@ python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzi
 ```
 ### SPEC HMMER
 ```
-./mcpat -infile ~/Desktop/spechmmer_xml/spechmmer0.xml -print_level 5 > ~/Desktop/spechmer/RESULTS_0.txt
+./mcpat -infile ~/Desktop/spechmmer_xml/spechmmer0.xml -print_level 5 > ~/Desktop/spechmmer/RESULTS_0.txt
 ./mcpat -infile ~/Desktop/spechmmer_xml/spechmmer1.xml -print_level 5 > ~/Desktop/spechmmer/RESULTS_1.txt
 ./mcpat -infile ~/Desktop/spechmmer_xml/spechmmer2.xml -print_level 5 > ~/Desktop/spechmmer/RESULTS_2.txt
 ./mcpat -infile ~/Desktop/spechmmer_xml/spechmmer3.xml -print_level 5 > ~/Desktop/spechmmer/RESULTS_3.txt
