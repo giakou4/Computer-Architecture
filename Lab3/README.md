@@ -69,6 +69,28 @@ EDAP = Energy x Delay x Area
 * Energy [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * runtime(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
 * Delay: Propagation delay aka Gate Delay is the length of time which starts when the input to a logic gate becomes stable and valid to change, to the time that the output of that logic gate is stable and valid to change. 
 
-### [2.2] 
+### [2.2] Run McPAT for the simulated Gem5 statistics.
+
+First we created the .xml files from the stats.txt and config.json from each simulation.  
+Then we run the McPAT.  
+Below are the results:  
+
+| Benchmark No | Area [mm^2] | Peak Power [W] | Runtime Dynamic [W] | Subthreshold Leakage [W] | Gate Leakage [W] | Subthreshold + Gate Leakage | Simulated Seconds |
+|--------------|-------------|----------------|---------------------|--------------------------|------------------|-----------------------------|-------------------|
+| specbzip 1   | 21.0012     | 5.36199        | 0.45965             | 1.82964                  | 0.0141307        |                             | 0.158500          |
+| specbzip 2   | 17.2098     | 4.59736        | 0.361326            | 1.27398                  | 0.0090865        |                             | 0.159772          |
+| specbzip 3   | 24.665      | 4.99011        | 0.368531            | 1.55084                  | 0.012234         |                             | 0.15993           |
+| specbzip 4   | 19.0201     | 4.86624        | 0.361324            | 1.54667                  | 0.0117354        |                             | 0.161413          |
+| specbzip 5   | 28.4386     | 5.26733        | 0.484413            | 1.58045                  | 0.0120246        |                             | 0.156349          |
+| specbzip 6   | 25.0795     | 5.26541        | 0.573511            | 1.38748                  | 0.0101832        |                             | 0.155590          |
+| specbzip 7   | 25.8368     | 5.83038        | 0.776057            | 1.42727                  | 0.0105313        |                             | 0.155438          |
+| specbzip 8   | 39.55558    | 12.4691        | 1.91203             | 1.69454                  | 0.0122891        |                             | 0.154827          |
+| specbzip 9   | 154.371     | 43.0317        | 7.70812             | 4.05166                  | 0.0339996        |                             | 0.154347          |
+| specbzip 10  | 40.918      | 12.4684        | 1.91164             | 1.69449                  | 0.0122858        |                             | 0.154849          |
+| specbzip 11  | 53.7714     | 17.0803        | 3.90032             | 2.18252                  | 0.0149441        |                             | 0.154699          |
+| specbzip 12  | 393.39      | 153.365        | 28.0436             | 12.3372                  | 0.093019         |                             | 0.156223          |
+| specbzip 0   | 15.9545     | 3.86567        | 0.361428            | 1.14522                  | 0.0080513        |                             | 0.161337          |
+
+
 
 ### [2.3]
