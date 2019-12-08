@@ -42,39 +42,37 @@ python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzi
 
 
 ```
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/spechmmer/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/spechmmer/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spehmmer0.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/speccmf/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/specmf/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speccmf0.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer1/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer1.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf1/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf1.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer2/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer2.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf2/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf2.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer3/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer3.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf3/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf3.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer4/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer4.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf4/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf4.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer5/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer5.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf5/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf5.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer6/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer6/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer6.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf6/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf6/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf6.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer7/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer7/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer7.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf7/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf7/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf7.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer8/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer8/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer8.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf8/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf8/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf8.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer9/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer9/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer9.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf9/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf9/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf9.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer10/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer10/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer10.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf10/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf10/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf10.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer11/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer11/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer11.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf11/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf11/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf11.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer12/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer12/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer12.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf12/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf12/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf12.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer13/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer13/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer13.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf13/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf13/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf13.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer14/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer14/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer14.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf14/stats.txt ~/Desktop/Computer-Architecture/lab2/speccmf_improvement/speccmf14/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmf14.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer15/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer15/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer15.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer16/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer16/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer16.xml
 
 
 
