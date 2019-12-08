@@ -42,37 +42,31 @@ python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzi
 
 
 ```
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specmcf/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/specmcf/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf0.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzip/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzip/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specbzip.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf1/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf1.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip1/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip1.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf2/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf2.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip2/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip2.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf3/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf3.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip3/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip3.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf4/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf4.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip4/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip4.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf5/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf5.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip5/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip5.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf6/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf6/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf6.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip6/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip6/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip6.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf7/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf7/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf7.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip7/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip7/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip7.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf8/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf8/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf8.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip8/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip8/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip8.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf9/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf91/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf9.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip9/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip9/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip9.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf10/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf10/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf10.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip10/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip10/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip10.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf11/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf11/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf11.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip11/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip11/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip11.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf12/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf12/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf12.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf13/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf13/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf13.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf14/stats.txt ~/Desktop/Computer-Architecture/lab2/specmcf_improvement/specmcf14/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specmcf14.xml
-
-
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip12/stats.txt ~/Desktop/Computer-Architecture/lab2/specbzip_improvement/specbzip12/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spevbzip12.xml
 
 
 
