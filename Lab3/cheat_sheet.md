@@ -42,38 +42,41 @@ python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzi
 
 
 ```
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specsjeng/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/specsjeng/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng0.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/spechmmer/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/spechmmer/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spehmmer0.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng1/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng1.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer1/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer1.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng2/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng2.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer2/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer2.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer3/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer3.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer4/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer4.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer5/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer5.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer6/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer6/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer6.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer7/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer7/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer7.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer8/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer8/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer8.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer9/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer9/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer9.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer10/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer10/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer10.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer11/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer11/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer11.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer12/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer12/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer12.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer13/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer13/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer13.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer14/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer14/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer14.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer15/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer15/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer15.xml
+
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer16/stats.txt ~/Desktop/Computer-Architecture/lab2/spechmmer_improvement/spechmmer16/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/spechmmer16.xml
 
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng3/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng3.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng4/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng4.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng5/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng5.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng6/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng6/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng6.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng7/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng7/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng7.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng8/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng8/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng8.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng9/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng9/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng9.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng1-/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng1-/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng10.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng11/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng11/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng11.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng12/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng12/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng12.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng13/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng13/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng13.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng14/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng14/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng14.xml
-
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng15/stats.txt ~/Desktop/Computer-Architecture/lab2/specsjeng_improvement/specsjeng15/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/specsjeng15.xml
 
 
 ```
