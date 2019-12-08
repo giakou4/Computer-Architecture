@@ -44,15 +44,15 @@ python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/specbzi
 ```
 python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/spec_results1/speclibm/stats.txt ~/Desktop/Computer-Architecture/lab2/spec_results1/speclibm/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm0.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm1/stats.txt ~/Desktop/Computer-Architecture/lab2/sspeclibm_improvement/speclibm1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm1.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm1/stats.txt ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm1/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm1.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm2/stats.txt ~/Desktop/Computer-Architecture/lab2/sspeclibm_improvement/speclibm2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm2.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm2/stats.txt ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm2/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm2.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm3/stats.txt ~/Desktop/Computer-Architecture/lab2/sspeclibm_improvement/speclibm3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm3.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm3/stats.txt ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm3/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm3.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm4/stats.txt ~/Desktop/Computer-Architecture/lab2/sspeclibm_improvement/speclibm4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm4.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm4/stats.txt ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm4/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm4.xml
 
-python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm5/stats.txt ~/Desktop/Computer-Architecture/lab2/sspeclibm_improvement/speclibm5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm5.xml
+python GEM5ToMcPAT.py ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm5/stats.txt ~/Desktop/Computer-Architecture/lab2/speclibm_improvement/speclibm5/config.json ~/my_mcpat/mcpat/ProcessorDescriptionFiles/inorder_arm.xml -o ~/Desktop/speclibm5.xml
 
 ```
 
