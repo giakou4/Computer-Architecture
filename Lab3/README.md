@@ -34,6 +34,8 @@ With a first glance we would say that the 40W CPU would consume more power than 
 
 If the 40W CPU takes advantages of all these, while to 5W CPU does not, the battery of the 40W CPU may last longer.
 
+In order to have a specific asnwer, we would need the run-time of the simulated programs that would run on the CPU. This could be a combination of gem5 output and PcPAT.
+
 ### [1.3] Xeon vs ARM-9
 
 We run Xeon and ARM9 2GHz in McPAT.
@@ -67,7 +69,7 @@ EDAP = Energy x Delay x Area
 
 * Area: obvious
 * Energy [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * runtime(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
-* Delay: Propagation delay aka Gate Delay is the length of time which starts when the input to a logic gate becomes stable and valid to change, to the time that the output of that logic gate is stable and valid to change. 
+* Delay: Propagation delay or Gate Delay is the length of time which starts when the input to a logic gate becomes stable and valid to change, to the time that the output of that logic gate is stable and valid to change. 
 
 ### [2.2] Run McPAT for the simulated Gem5 statistics.
 
