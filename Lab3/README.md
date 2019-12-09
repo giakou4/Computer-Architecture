@@ -126,6 +126,6 @@ Lab-3 was easier to be implemented and most importantly, the simulation did not 
 
 The lab was __very interesting__. We got closer to design architectures (mostly caches) in order to maximize some standards for the CPU to perform better in specific benchmarks. GEM5 helped us to optimize the CPU for better results. We were free to change charachteristics -not as many as we wanted but enough to see a beter result. I would personally like to be able to change __more__ factors, like branch predictors,or use other policies in some cases. Changing just caches is quite __monotonous__. On the other hand, McPAT limited the options and made us look for other implementations because energy efficiency and size matters.
 
-*__To sum up, the lab was interesting and quite easy, although the workload was high. We had better use less benchmarks (1 or 2) and change more factors.__
+__To sum up, the lab was interesting and quite easy, although the workload was high. We had better use less benchmarks (1 or 2) and change more factors.__
 
 -Nikolaos Giakoumoglou
