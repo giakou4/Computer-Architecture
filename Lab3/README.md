@@ -78,7 +78,7 @@ First we created the .xml files from the stats.txt and config.json from each sim
 Then we run the McPAT.  
 Detailed results are presented in __results.txt__ in the relative files for each benchmark.
 The information for the EDAP and Graphs are held in 	__results.xlsx__, an excel file which contains:
-* 	__Contents__ sheet: each benchmark number represents a certain execution of gem5 with specific paramets.
+* 	__Contents__ sheet: each benchmark number represents a certain execution of gem5 with specific parametrs.
 * 	__Processor__ sheet: the proccessor information which were not needed.
 * 	__Core+L2__ sheet: the core and L2 information to calculate EDAP.
 
