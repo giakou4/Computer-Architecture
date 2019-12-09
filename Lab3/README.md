@@ -68,22 +68,23 @@ Minimize Enery-Delay-Area Product (EDAP)
 
 EDAP = Energy x Delay x Area
 
-* Area: obvious
-* Energy [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * runtime(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
-* Delay: Propagation delay or Gate Delay is the length of time which starts when the input to a logic gate becomes stable and valid to change, to the time that the output of that logic gate is stable and valid to change. 
+* 	__Area__: obvious
+* 	__Energy__ [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * runtime(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
+* 	__Delay__: Propagation delay or Gate Delay is the length of time which starts when the input to a logic gate becomes stable and valid to change, to the time that the output of that logic gate is stable and valid to change. 
 
 ### [2.2] Run McPAT for the simulated Gem5 statistics.
 
 First we created the .xml files from the stats.txt and config.json from each simulation.  
 Then we run the McPAT.  
-Detailed results are presented in results.txt in the relative files for each benchmark.
-The information for the EDAP and Graphs are held in results.xlsx, an excel file which contains:
-* Containts: each benchmark no represents a certain execution of gem5 with specific paramets. These paramets are held in Contents sheet.
-* Processor: the proccessor information which were not needed.
-* Core + L2: the core and L2 information to calculate EDAP.
+Detailed results are presented in __results.txt__ in the relative files for each benchmark.
+The information for the EDAP and Graphs are held in 	__results.xlsx__, an excel file which contains:
+* 	__Contents__ sheet: each benchmark number represents a certain execution of gem5 with specific paramets.
+* 	__Processor__ sheet: the proccessor information which were not needed.
+* 	__Core+L2__ sheet: the core and L2 information to calculate EDAP.
 
 For the calculations:
-* Energy = (Subthreshold Leakage + Gate Leakage + Runtime Dynamic) * sim_sec for core and L2 and Total Energy is the sum of both.
+* Energy = (Subthreshold Leakage + Gate Leakage + Runtime Dynamic) * sim_sec for core and L2  
+  Total Energy is the sum of both.
 * Total Area equals the sum of core and L2 area.
 * Delay equals the sum of Subthreshold Leakage with power gating for core and L2.
 
