@@ -39,6 +39,7 @@ In order to have a specific asnwer, we would need the run-time of the simulated 
 ### [1.3] Xeon vs ARM-9
 
 We run Xeon and ARM9 2GHz in McPAT.
+Detailed results are presented in results.zip ARM9_2GHz.txt and XEON.txt
 
 |                                          | ARM-9 2GHz | XEON 3.4GHz |
 |------------------------------------------|-----------|-------------|
@@ -75,6 +76,15 @@ EDAP = Energy x Delay x Area
 
 First we created the .xml files from the stats.txt and config.json from each simulation.  
 Then we run the McPAT.  
-Below are the results: 
+Detailed results are presented in results.txt in the relative files for each benchmark.
+The information for the EDAP and Graphs are held in results.xlsx, an excel file which contains:
+* Containts: each benchmark no represents a certain execution of gem5 with specific paramets. These paramets are held in Contents sheet.
+* Processor: the proccessor information which were not needed.
+* Core + L2: the core and L2 information to calculate EDAP.
+
+For the calculations:
+* Energy = (Subthreshold Leakage + Gate Leakage + Runtime Dynamic) * sim_sec for core and L2 and Total Energy is the sum of both.
+* Total Area equals the sum of core and L2 area.
+* Delay equals the sum of Subthreshold Leakage with power gating for core and L2.
 
 ### [2.3]
