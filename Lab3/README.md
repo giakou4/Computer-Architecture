@@ -90,7 +90,7 @@ For the calculations:
 
 The best EDAP for each benchmark was achieved for:
 
-| BENCHMARK | No | ENERGY   | DELAY    | AREA     | EDAP     | l1d_size | l1i_size | l2_size | l1i_assoc | l1d_assoc | l2_assoc | cache_line |
+| BENCHMARK | No | ENERGY[W]   | DELAY[W]    | AREA[mm^2]     | EDAP     | l1d_size[kB] | l1i_size[kB] | l2_size[kB] | l1i_assoc | l1d_assoc | l2_assoc | cache_line |
 |-----------|----|----------|----------|----------|----------|----------|----------|---------|-----------|-----------|----------|------------|
 | specbzip  | 0  | 0.233168 | 0.805096 | 14.22863 | 2.671038 | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
 | specmcf   | 0  | 0.160247 | 0.805096 | 14.22863 | 1.83569  | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
