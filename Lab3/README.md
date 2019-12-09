@@ -2,7 +2,7 @@
 
 ## STEP 1
 
-### [1.1] Dynamic Power and Leakage
+### [1.1] DYNAMIC POWER AND LEAKAGE
 
 *Leakage power*: The transistors are not perfect. Even when they are supposed to be “off”, they’re not truly off. They let a bit of current through. So, in any steady state, one transistor is on, and the other is off, but that “off” transistor allows some current to leak through it.
 
@@ -22,7 +22,7 @@ The capacitive load is a function of the number of transistors connected to an o
 Running the same programm twice for example (higher run-time), will result in more leakage (the current leaked will be dobuled) but the dynamic power will not change(frequency, voltage, capacity load = ct).
 
 
-### [1.2] 5W vs 40W battery
+### [1.2] 5W vs 40W BATTERY
 
 With a first glance we would say that the 40W CPU would consume more power than the 5W CPU. We have not taken into consideration, though, the energy efficiency of each CPU:
 
@@ -36,7 +36,7 @@ If the 40W CPU takes advantages of all these, while to 5W CPU does not, the batt
 
 In order to have a specific asnwer, we would need the run-time of the simulated programs that would run on the CPU. This could be a combination of gem5 output and PcPAT.
 
-### [1.3] Xeon vs ARM-9
+### [1.3] XEON vs ARM-9
 
 We run Xeon and ARM9 2GHz in McPAT.
 Detailed results are presented in results.zip ARM9_2GHz.txt and XEON.txt
@@ -60,7 +60,7 @@ ARM-9 total power is P2 = 2.96W + 0.10W = 3.06W and out of the total Power, only
 
 Minimize Enery-Delay-Area Product (EDAP)
 
-### [2.1] 
+### [2.1] EDAP
 
 EDAP = Energy x Delay x Area
 
@@ -68,7 +68,7 @@ EDAP = Energy x Delay x Area
 * 	__Energy__ [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * run-time(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
 * 	__Delay__ [sec] = run-time of the simulated program.
 
-### [2.2] Run McPAT for the simulated Gem5 statistics.
+### [2.2] RUN McPAT FOR THE SIMULATED GEM-5 STATISTICS
 
 First we created the .xml files from the stats.txt and config.json from each simulation.  
 Then we ran the McPAT.  
@@ -99,7 +99,6 @@ The best EDAP for each benchmark was achieved for:
 > We could achieve lower EDAP by decreasing memory more, but in this section we used the results from LAB-2 as they were, and did not run any additional simulations.
 
 #### Important Note for Graphs
-
 * 0-value represents the default value (see [1.1] from Lab-2)
 * 1-value is 2x the default value. 2-value is 4x the default value and so on.
 * -1-value is /2 the default value. -2-value is /4 the default value and so on.
@@ -115,4 +114,18 @@ The best EDAP for each benchmark was achieved for:
 ![specsjeng_area](https://user-images.githubusercontent.com/57758089/70469910-a7451c00-1ad2-11ea-92f2-f041f7ca7933.png)
 ![speclibm_peakpower](https://user-images.githubusercontent.com/57758089/70469911-a7ddb280-1ad2-11ea-88ff-8ef9fa62cf1a.png)
 
-### [2.3]
+### [2.3] OBSERVATION: COST-FUNCTION VS McPAT
+
+We observe that indeed, increasing cache size L1 or L2, the area and the peak power is increased, while the associativity does not affect neither area not peak power that much. The most significant change to those factors is observed by increasing the cache-line. The truth is that cache-line is 64, 128 or rarely 256, while in our measurements, the cache-line sometimes reached 2048! [software.intel.com](https://software.intel.com/en-us/articles/loop-optimizations-where-blocks-are-required)
+
+## CONCLUSION
+
+Lab-3 was easier to be implemented and most importantly, the simulation did not take much time. McPAT was an easy to use tool, at least this version, with some important outputs. I personally never thought that power consumption could be such a restrictive factor for modern architecture.
+
+## CONCLUSION FOR ALL 3 LABS
+
+The lab was *very interesting*. We got closer to design architectures (mostly caches) in order to maximize some standards for the CPU to perform better in specific benchmarks. GEM5 helped us to optimize the CPU for better results. We were free to change charachteristics -not as many as we wanted but enough to see a beter result. I would personally like to be able to change *more* factors, like branch predictors,or use other policies in some cases. Changing just caches is quite *monotonous*. On the other hand, McPAT limited the options and made us look for other implementations because energy efficiency and size matters.
+
+*To sum up, the lab was interesting and quite easy, although the workload was high. We had better use less benchmarks (1 or 2) and change more factors.*
+
+- Nikolaos Giakoumoglou
