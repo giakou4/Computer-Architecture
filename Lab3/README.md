@@ -98,7 +98,7 @@ The best EDAP for each benchmark was achieved for:
 | specsjeng | 0  | 0.625926 | 0.805096 | 14.22863 | 7.170234 | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
 | speclibm  | 2  | 0.279212 | 0.613072 | 19.41066 | 3.322662 | 64       | 32       | 4       | 2         | 2         | 8        | 64         |
 
-> We observe that for the most benchmarks, the best EDAP was achieved for the default(no 0) parametrs. That is because in LAB-2 we aim for the best CPI, which was achieved for increasing memory and cache-line, while associativity as mentioned at LAB-2 report, does not affect any criteria of the EDAP as much as memory size and cache-line.
+> We observe that for the most benchmarks, the best EDAP was achieved for the default(No 0) parametrs. That is because in LAB-2 we aimed for the best CPI, which was achieved for increasing memory and cache-line, while associativity as mentioned at LAB-2 report, does not affect any criteria of the EDAP as much as memory size and cache-line.
 > We could achieve lower EDAP by decreasing memory more, but in this section we used the results from LAB-2 as they were, and did not run any additional simulations.
 
 ### [2.3]
