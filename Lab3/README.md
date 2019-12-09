@@ -69,17 +69,17 @@ Minimize Enery-Delay-Area Product (EDAP)
 EDAP = Energy x Delay x Area
 
 * 	__Area__ [mm^2]: obvious
-* 	__Energy__ [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * runtime(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
-* 	__Delay__ [sec] = run time of the simulated program.
+* 	__Energy__ [Joule] = (Total Leakage[Watt] + Runtime Dynamic[Watt]) * run-time(sec), where Total Leakage[Watt] = Subthreshold Leakage[Watt] + Gate Leakage[Watt]
+* 	__Delay__ [sec] = run-time of the simulated program.
 
 ### [2.2] Run McPAT for the simulated Gem5 statistics.
 
 First we created the .xml files from the stats.txt and config.json from each simulation.  
-Then we run the McPAT.  
+Then we ran the McPAT.  
 Detailed results are presented in __results.txt__ in the relative folders for each benchmark.
 The information for the EDAP and Graphs are held in 	__results.xlsx__, an excel file which contains:
-* 	__Contents__ sheet: each benchmark number represents a certain execution of gem5 with specific parametrs.
-* 	__Processor__ sheet: the proccessor information which were not needed.
+* 	__Contents__ sheet: each benchmark number represents a certain execution of gem5 with the specific parametrs.
+* 	__Processor__ sheet: the proccessor information
 * 	__Core+L2__ sheet: the core and L2 information to calculate EDAP.
 
 For the calculations:
@@ -90,13 +90,14 @@ For the calculations:
 
 The best EDAP for each benchmark was achieved for:
 
-| BENCHMARK | No | ENERGY[J]   | DELAY[W]    | AREA[mm^2]     | EDAP     | l1d_size[kB] | l1i_size[kB] | l2_size[kB] | l1i_assoc | l1d_assoc | l2_assoc | cache_line |
-|-----------|----|----------|----------|----------|----------|----------|----------|---------|-----------|-----------|----------|------------|
-| specbzip  | 0  | 0.233168 | 0.805096 | 14.22863 | 2.671038 | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
-| specmcf   | 0  | 0.160247 | 0.805096 | 14.22863 | 1.83569  | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
-| spechmmer | 7  | 0.143592 | 0.609227 | 13.09206 | 1.145293 | 64       | 32       | 2       | 2         | 4         | 8        | 64         |
-| specsjeng | 0  | 0.625926 | 0.805096 | 14.22863 | 7.170234 | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
-| speclibm  | 2  | 0.279212 | 0.613072 | 19.41066 | 3.322662 | 64       | 32       | 4       | 2         | 2         | 8        | 64         |
+| BENCHMARK | No | ENERGY[J] | DELAY[sec] | AREA[mm^2] | EDAP     | l1d_size | l1i_size | l2_size | l1i_assoc | l1d_assoc | l2_assoc | cache_line |
+|-----------|----|-----------|------------|------------|----------|----------|----------|---------|-----------|-----------|----------|------------|
+| specbzip  | 0  | 0.233168  | 0.161337   | 14.22863   | 0.535262 | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
+| specmcf   | 0  | 0.160247  | 0.109125   | 14.22863   | 0.248815 | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
+| spechmmer | 7  | 0.143592  | 0.118426   | 13.09206   | 0.22263  | 64       | 32       | 2       | 2         | 4         | 8        | 64         |
+| specsjeng | 0  | 0.625926  | 0.513541   | 14.22863   | 4.573629 | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
+| speclibm  | 0  | 0.348443  | 0.262355   | 14.22863   | 1.30072  | 64       | 32       | 2       | 2         | 2         | 8        | 64         |
+
 
 > We observe that for the most benchmarks, the best EDAP was achieved for the default(No 0) parametrs. That is because in LAB-2 we aimed for the best CPI, which was achieved for increasing memory and cache-line, while associativity as mentioned at LAB-2 report, does not affect any criteria of the EDAP as much as memory size and cache-line.
 > We could achieve lower EDAP by decreasing memory more, but in this section we used the results from LAB-2 as they were, and did not run any additional simulations.
