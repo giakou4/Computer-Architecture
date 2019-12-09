@@ -53,12 +53,8 @@ Detailed results are presented in results.zip ARM9_2GHz.txt and XEON.txt
 | Gate Leakage                             | 0.05 W    | 1.66 W      |
 | Runtime Dynamic                          | 2.96 W    | 72.91 W     |
 
-Taking into consideration that Xeon is 40 times faster than ARM9, in order to get the most efficient CPU we take the ratio   
-K = Energy(Xeon) / Energy(ARM9), where  
-Energy = (Total Leakage + Runtime Dynamic) * runtime  
-so  
-K = (109.74 / 3.06) * 1/40 = 0.89  
-which means that if Xeon is 40 times faster, Xeon is more energy efficient.  
+Xeon total power is P1 = 72.91W + 36.83W = 109.74W and out of the total Power, only 66.43% is used, while
+ARM-9 total power is P2 = 2.96W + 0.10W = 3.06W and out of the total Power, only 96.73% is used.
 
 ## STEP 2
 
