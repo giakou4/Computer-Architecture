@@ -102,14 +102,14 @@ The best EDAP for each benchmark was achieved for:
 * 0-value represents the default value (see [1.1] from Lab-2)
 * 1-value is 2x the default value. 2-value is 4x the default value and so on.
 * -1-value is /2 the default value. -2-value is /4 the default value and so on.
-|AREA                       |  PEAK POWER|
-|:-------------------------:|:-------------------------:|
-|![speclibm_area](https://user-images.githubusercontent.com/57758089/70469897-a3b19500-1ad2-11ea-95d8-0052cdcd4bbc.png)  |  |![speclibm_peakpower](https://user-images.githubusercontent.com/57758089/70469911-a7ddb280-1ad2-11ea-88ff-8ef9fa62cf1a.png)
-|![specbzip_area](https://user-images.githubusercontent.com/57758089/70469900-a4e2c200-1ad2-11ea-8edb-ca5852fdecc3.png)  |  
-|![specbzip_peakpower](https://user-images.githubusercontent.com/57758089/70469898-a44a2b80-1ad2-11ea-9419-81ab80479f8e.png)
-|![specmcf_area](https://user-images.githubusercontent.com/57758089/70469903-a613ef00-1ad2-11ea-957f-3e143f0a063f.png)  |  |![specmcf_peakpower](https://user-images.githubusercontent.com/57758089/70469901-a57b5880-1ad2-11ea-982b-18a271c718a1.png)
-|![spechmmer_area](https://user-images.githubusercontent.com/57758089/70469907-a6ac8580-1ad2-11ea-930f-f87b3aedd102.png)  |  |![spechmmer_peakpower](https://user-images.githubusercontent.com/57758089/70469904-a6ac8580-1ad2-11ea-8115-dfb232d57d12.png)
-|![specsjeng_area](https://user-images.githubusercontent.com/57758089/70469910-a7451c00-1ad2-11ea-92f2-f041f7ca7933.png)  |  |![specsjeng_peakpower](https://user-images.githubusercontent.com/57758089/70469908-a7451c00-1ad2-11ea-8bd8-40bb3eeba043.png)
+
+| PEAK POWER [W]                                                                                                               | AREA [mm^2]                                                                                                             |
+|------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| ![specbzip_peakpower](https://user-images.githubusercontent.com/57758089/70469898-a44a2b80-1ad2-11ea-9419-81ab80479f8e.png)  | ![specbzip_area](https://user-images.githubusercontent.com/57758089/70469900-a4e2c200-1ad2-11ea-8edb-ca5852fdecc3.png)  |
+| ![specmcf_peakpower](https://user-images.githubusercontent.com/57758089/70469901-a57b5880-1ad2-11ea-982b-18a271c718a1.png)   | ![specmcf_area](https://user-images.githubusercontent.com/57758089/70469903-a613ef00-1ad2-11ea-957f-3e143f0a063f.png)   |
+| ![spechmmer_peakpower](https://user-images.githubusercontent.com/57758089/70469904-a6ac8580-1ad2-11ea-8115-dfb232d57d12.png) | ![spechmmer_area](https://user-images.githubusercontent.com/57758089/70469907-a6ac8580-1ad2-11ea-930f-f87b3aedd102.png) |
+| ![specsjeng_peakpower](https://user-images.githubusercontent.com/57758089/70469908-a7451c00-1ad2-11ea-8bd8-40bb3eeba043.png) | ![specsjeng_area](https://user-images.githubusercontent.com/57758089/70469910-a7451c00-1ad2-11ea-92f2-f041f7ca7933.png) |
+| ![speclibm_peakpower](https://user-images.githubusercontent.com/57758089/70469911-a7ddb280-1ad2-11ea-88ff-8ef9fa62cf1a.png)  | ![speclibm_area](https://user-images.githubusercontent.com/57758089/70469897-a3b19500-1ad2-11ea-95d8-0052cdcd4bbc.png)  |
 
 ### [2.3] OBSERVATION: COST-FUNCTION VS McPAT
 
