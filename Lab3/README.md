@@ -26,7 +26,7 @@ Running the same programm twice for example (higher run-time), will result in mo
 
 With a first glance we would say that the 40W CPU would consume more power than the 5W CPU. We have not taken into consideration, though, the energy efficiency of each CPU:
 
-* For leakage power, we can use transistors that are less leaky. The downside of this is that these transistors are slower to switch, and therefore your circuit will run slower.
+* For leakage power, we can use transistors that are less leaky. The downside of this is that these transistors are slower to switch, and therefore the circuit will run slower.
 * For dynamic power, we need to reduce the frequency at which the transistors switch. Some examples are:
   * Slowing down (or even turning off) the clock when appropriate (e.g. when a CPU is iddle)
   * Isolating sections of logic when they are not used, preventing them from seeing changes on a particular signal that is changing frequently
