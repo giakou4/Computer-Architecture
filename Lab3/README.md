@@ -117,7 +117,7 @@ The best EDAP for each benchmark was achieved for:
 
 ### [2.3] OBSERVATION: COST-FUNCTION VS McPAT
 
-We observe that indeed, increasing cache size L1 or L2, the area and the peak power is increased, while the associativity does not affect neither area not peak power that much. The most significant change to those factors is observed by increasing the cache-line. The truth is that cache-line is 64, 128 or rarely 256, while in our measurements, the cache-line sometimes reached 2048! [software.intel.com](https://software.intel.com/en-us/articles/loop-optimizations-where-blocks-are-required)
+We observe that indeed, increasing cache size L1 or L2, the area and the peak power is increased, while the associativity does not affect neither area nor peak power that much. The most significant change to those factors is observed by increasing the cache-line. The truth is that cache-line is 64, 128 or rarely 256, while in our measurements, the cache-line sometimes reached 2048! [software.intel.com](https://software.intel.com/en-us/articles/loop-optimizations-where-blocks-are-required)
 
 ## CONCLUSION
 
