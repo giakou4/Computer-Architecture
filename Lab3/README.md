@@ -18,7 +18,7 @@ So
 
 Source : [Computer Architecture by Hennesy and Patterson](https://www.sciencedirect.com/topics/computer-science/dynamic-power)
 
-The capacitive load is a function of the number of transistors connected to an output. So the programm with the most transistor switches will have a higher dynamic power. We assume that both programms run on the same proccessor at the same frequency and voltage. Regarding the leakage, the programm with the least transistor switches will have a higher leakage. Those transistors are supposed to be off (we disable the transistors which are not used, suchs as a the transistors connected to floating points operations, in a programm with integers manipulations) but a small amount of current is allowed to leak through them.
+The capacitive load is a function of the number of transistors connected to an output. So the programm with the most transistor switches will have a higher dynamic power. We assume that both programms run on the same proccessor at the same frequency and voltage. Regarding the leakage, the programm with less transistor switches will have a higher leakage. Those transistors are supposed to be off (we disable the transistors which are not used, suchs as a the transistors connected to floating points operations, in a programm with integers manipulations) but a small amount of current is allowed to leak through them.
 Running the same programm twice for example (higher run-time), will result in more leakage (the current leaked will be dobuled) but the dynamic power will not change(frequency, voltage, capacity load = ct).
 
 
@@ -55,6 +55,10 @@ Detailed results are presented in results.zip ARM9_2GHz.txt and XEON.txt
 
 Xeon total power is P1 = 72.91W + 36.83W = 109.74W and out of the total Power, only 66.43% is used, while
 ARM-9 total power is P2 = 2.96W + 0.10W = 3.06W and out of the total Power, only 96.73% is used.
+ARM9 might be more energy efficient but it is 40 times slower. Assuming that the program runs for 1 sec on Xeon, it would need 40 sec on ARM.
+So the energy consumption of ARM would be 122.4 Joule, while Xeon's would be 109.74 J.
+Running for more time though, the leakage is an important factor and Xeon has a very high leakage.
+As a result ARM is more energy efficient for long time use.
 
 ## STEP 2
 
