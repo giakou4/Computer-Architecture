@@ -35,6 +35,7 @@ With a first glance we would say that the 40W CPU would consume more power than 
 If the 40W CPU takes advantages of all these, while to 5W CPU does not, the battery of the 40W CPU may last longer.
 
 In order to have a specific asnwer, we would need the run-time of the simulated programs that would run on the CPU. This could be a combination of gem5 output and PcPAT.
+Note that energy equals power times the simulated time of the program. 
 
 ### [1.3] XEON vs ARM-9
 
