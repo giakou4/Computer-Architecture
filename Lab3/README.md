@@ -22,7 +22,7 @@ The capacitive load is a function of the number of transistors connected to an o
 Running the same programm twice for example (higher run-time), will result in more leakage (the current leaked will be dobuled) but the dynamic power will not change(frequency, voltage, capacity load = ct).
 
 
-### [1.2] 5W vs 40W BATTERY
+### [1.2] 5W vs 40W CPU
 
 With a first glance we would say that the 40W CPU would consume more power than the 5W CPU. We have not taken into consideration, though, the energy efficiency of each CPU:
 
