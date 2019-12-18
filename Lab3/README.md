@@ -32,10 +32,12 @@ With a first glance we would say that the 40W CPU would consume more power than 
   * Isolating sections of logic when they are not used, preventing them from seeing changes on a particular signal that is changing frequently
 * In both cases, reducing the power supply voltage also helps reducing power consumption because power is proportional to square of voltage (P=V^2/R). This also causes the transistors to switch more slowly.
 
-If the 40W CPU takes advantages of all these, while to 5W CPU does not, the battery of the 40W CPU may last longer.
+In computing, performance per watt is a measure of the energy efficiency of a particular computer architecture or computer hardware.
+
+Performance (in operations/second) per watt can also be written as operations/watt-second, or operations/joule, since 1 watt = 1 joule/second.
 
 In order to have a specific asnwer, we would need the run-time of the simulated programs that would run on the CPU. This could be a combination of gem5 output and PcPAT.
-Note that energy equals power times the simulated time of the program. 
+ 
 
 ### [1.3] XEON vs ARM-9
 
